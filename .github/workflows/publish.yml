@@ -899,7 +899,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ needs.prepare-release-state.outputs.release_sha }}
-          # GH_PAT (sisyphus-dev-ai, workflow scope) can mirror source that
+          # GH_PAT (guldan-ai, workflow scope) can mirror source that
           # includes workflow changes; the default token cannot.
           token: ${{ secrets.GH_PAT }}
 
