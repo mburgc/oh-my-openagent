@@ -543,11 +543,11 @@ jobs:
             if [[ "$CONTEXT_TYPE" == "pr" ]]; then
               gh pr edit "$CONTEXT_NUMBER" \
                 --repo "$REPOSITORY" \
-                --remove-label "sisyphus: working" || true
+                --remove-label "guldan: working" || true
             else
               gh issue edit "$CONTEXT_NUMBER" \
                 --repo "$REPOSITORY" \
-                --remove-label "sisyphus: working" || true
+                --remove-label "guldan: working" || true
             fi
           fi
 
