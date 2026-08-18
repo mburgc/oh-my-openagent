@@ -190,7 +190,7 @@ function buildCommitFooterInjection(
 		sections.push("**Example:**")
 		sections.push("```bash")
 		sections.push(
-			`${cmdPrefix}git commit -m "{Commit Message}" -m "Co-authored-by: Sisyphus <clio-agent@sisyphuslabs.ai>"`
+			`${cmdPrefix}git commit -m "{Commit Message}" -m "Co-authored-by: Arthas <clio-agent@stormwind.ai>"`
 		)
 		sections.push("```")
 	}

@@ -16,35 +16,27 @@
 > [!TIP]
 > **Building in Public**
 >
-> The maintainer builds and maintains oh-my-openagent in real-time with Jobdori, an AI assistant running on a heavily customized fork of OpenClaw.
 > Every feature, every fix, every issue triage — live in our Discord.
 >
 > [![Building in Public](./.github/assets/building-in-public.png)](https://discord.gg/PUwSMR9XNk)
 >
 > [**→ Watch it happen in #building-in-public**](https://discord.gg/PUwSMR9XNk)
 
-> [!NOTE]
->
-> [![Sisyphus Labs - Meet Dori. Not a demo. Subscribes to everything.](./.github/assets/sisyphuslabs.png?v=4)](https://sisyphuslabs.ai)
-> > **OmO is maintained by Jobdori, the AI assistant shown above. Meet your own Jobdori — Dori. <br />Join the waitlist [here](https://sisyphuslabs.ai).**
-
 > [!TIP]
 > Be with us!
 >
 > | [<img alt="Discord link" src="https://img.shields.io/discord/1452487457085063218?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square" width="156px" />](https://discord.gg/PUwSMR9XNk) | Join our [Discord community](https://discord.gg/PUwSMR9XNk) to connect with contributors and fellow `oh-my-openagent` users. |
 > | :-----| :----- |
-> | [<img alt="X link" src="https://img.shields.io/badge/Follow-%40justsisyphus-00CED1?style=flat-square&logo=x&labelColor=black" width="156px" />](https://x.com/justsisyphus) | Updates for `oh-my-openagent` used to be posted on my X account. <br /> Since it was mistakenly suspended, [@justsisyphus](https://x.com/justsisyphus) now posts updates on my behalf. |
-> | [<img alt="GitHub Follow" src="https://img.shields.io/github/followers/code-yeongyu?style=flat-square&logo=github&labelColor=black&color=24292f" width="156px" />](https://github.com/code-yeongyu) | Follow [@code-yeongyu](https://github.com/code-yeongyu) on GitHub for more projects. |
 
 <!-- <CENTERED SECTION FOR GITHUB DISPLAY> -->
 
 <div align="center">
 
-<a href="https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent"><img src="./.github/assets/omo-logo.png" alt="OmO" width="200" /></a>
+<a href="https://github.com/mburgc/oh-my-openagent#oh-my-openagent"><img src="./.github/assets/omo-logo.png" alt="OmO" width="200" /></a>
 
-[![Oh My OpenAgent](./.github/assets/hero.jpg)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent)
+[![Oh My OpenAgent](./.github/assets/hero.jpg)](https://github.com/mburgc/oh-my-openagent#oh-my-openagent)
 
-[![Preview](./.github/assets/omo.png)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent)
+[![Preview](./.github/assets/omo.png)](https://github.com/mburgc/oh-my-openagent#oh-my-openagent)
 
 </div>
 
@@ -58,14 +50,14 @@
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/code-yeongyu/oh-my-openagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/mburgc/oh-my-openagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/mburgc/oh-my-openagent/releases)
 [![npm downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fomo.dev%2Fapi%2Fnpm-downloads&style=flat-square)](https://www.npmjs.com/package/oh-my-opencode)
-[![GitHub Contributors](https://img.shields.io/github/contributors/code-yeongyu/oh-my-openagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/graphs/contributors)
-[![GitHub Forks](https://img.shields.io/github/forks/code-yeongyu/oh-my-openagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/network/members)
-[![GitHub Stars](https://img.shields.io/github/stars/code-yeongyu/oh-my-openagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/code-yeongyu/oh-my-openagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/issues)
-[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/blob/dev/LICENSE.md)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/code-yeongyu/oh-my-openagent)
+[![GitHub Contributors](https://img.shields.io/github/contributors/mburgc/oh-my-openagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/mburgc/oh-my-openagent/graphs/contributors)
+[![GitHub Forks](https://img.shields.io/github/forks/mburgc/oh-my-openagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/mburgc/oh-my-openagent/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/mburgc/oh-my-openagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/mburgc/oh-my-openagent/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/mburgc/oh-my-openagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/mburgc/oh-my-openagent/issues)
+[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/mburgc/oh-my-openagent/blob/dev/LICENSE.md)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/mburgc/oh-my-openagent)
 [![Docs](https://img.shields.io/badge/docs-omo.vibetip.help-369eff?labelColor=black&logo=readthedocs&logoColor=white&style=flat-square)](https://omo.vibetip.help/docs)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-cn.md)
@@ -78,7 +70,7 @@
 
 > "It made me cancel my Cursor subscription. Unbelievable things are happening in the open source community." - [Arthur Guiot](https://x.com/arthur_guiot/status/2008736347092382053?s=20)
 
-> "If Claude Code does in 7 days what a human does in 3 months, Sisyphus does it in 1 hour. It just works until the task is done. It is a discipline agent." <br/>- B, Quant Researcher
+> "If Claude Code does in 7 days what a human does in 3 months, Arthas does it in 1 hour. It just works until the task is done. It is a discipline agent." <br/>- B, Quant Researcher
 
 > "Knocked out 8000 eslint warnings with Oh My Opencode, just in a day" <br/>- [Jacob Ferrari](https://x.com/jacobferrari_/status/2003258761952289061)
 
@@ -136,7 +128,7 @@ Paste this prompt into Claude Code, AmpCode, Cursor, or any agent:
 
 ```
 Install and configure oh-my-openagent by following the instructions here:
-https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+https://raw.githubusercontent.com/mburgc/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
 ```
 
 If you only want the **Light edition** (Codex CLI), the installer asks whether to configure Codex for autonomous full-permissions mode. You can run it yourself in one line:
@@ -154,7 +146,7 @@ For the Light edition, Bun is not required. Use `npx lazycodex-ai install` from 
 Fetch the full guide and follow it step by step:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+curl -fsSL https://raw.githubusercontent.com/mburgc/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
 ```
 
 The guide covers: platform selection, the subscription interview, provider authentication (Anthropic / Gemini / Copilot / Z.ai / OpenCode Zen), the agent-to-model matching matrix, modes (`ultrawork`, `search`, `analyze`, `team`, `hyperplan`), slash commands, the Light edition's 8 Codex components, Team Mode, and uninstall. Don't summarize it; read it end to end.
@@ -183,7 +175,7 @@ See [Privacy Policy](docs/legal/privacy-policy.md) and [Terms of Service](docs/l
 We're past the era of reading docs. Just paste this into your agent:
 
 ```
-Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/README.md
+Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/mburgc/oh-my-openagent/refs/heads/dev/README.md
 ```
 
 
@@ -211,7 +203,7 @@ Even with only the following subscriptions, `ultrawork` works well (this project
 
 |       | Feature                                                  | Edition  | What it does                                                                                                                                                                                                     |
 | :---: | :------------------------------------------------------- | :------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   🤖   | **Discipline Agents**                                    | Ultimate | Sisyphus orchestrates Hephaestus, Oracle, Librarian, Explore. A full AI dev team in parallel.                                                                                                                    |
+|   🤖   | **Discipline Agents**                                    | Ultimate | Arthas orchestrates Illidan, Medivh, Chromie, Brann. A full AI dev team in parallel.                                                                                                                    |
 |   🧩   | **Codex CLI Light Edition**                              | Light    | Portable OMO components (rules, comment-checker, git-bash, LSP, ultrawork, ulw-loop, start-work continuation, telemetry) running inside OpenAI Codex CLI. Install via `npx lazycodex-ai install`.             |
 |   👥   | **Team Mode** (v4.0, opt-in)                             | Ultimate | Lead agent + up to 8 parallel members, real-time tmux visualization, dedicated `team_*` tools. Powers `hyperplan` (5 hostile critics) and `security-research` (3 hunters + 2 PoC engineers). [Docs →](docs/guide/team-mode.md) |
 |   ⚡   | **`ultrawork` / `ulw`**                                  | Both     | One word. Every agent activates. Doesn't stop until done.                                                                                                                                                        |
@@ -229,7 +221,7 @@ Even with only the following subscriptions, `ultrawork` works well (this project
 |   🖥️   | **Tmux Integration**                                     | Ultimate | Full interactive terminal. REPLs, debuggers, TUIs. All live.                                                                                                                                                     |
 |   🔌   | **Claude Code Compatible**                               | Ultimate | Your hooks, commands, skills, MCPs, and plugins? All work here.                                                                                                                                                  |
 |   🧬   | **Skill-Embedded MCPs**                                  | Ultimate | Skills carry their own MCP servers. No context bloat.                                                                                                                                                            |
-|   📋   | **Prometheus Planner**                                   | Ultimate | Interview-mode strategic planning before any execution.                                                                                                                                                          |
+|   📋   | **Khadgar Planner**                                   | Ultimate | Interview-mode strategic planning before any execution.                                                                                                                                                          |
 |   🔍   | **`/init-deep`**                                         | Ultimate | Auto-generates hierarchical `AGENTS.md` files throughout your project. Great for both token efficiency and your agent's performance.                                                                             |
 
 > **Edition legend.** **Ultimate** = OpenCode-only (`bunx oh-my-openagent install`). **Light** = Codex CLI-only (`npx lazycodex-ai install`). **Both** = shipped in both editions, often with slightly different implementations under the hood.
@@ -237,19 +229,21 @@ Even with only the following subscriptions, `ultrawork` works well (this project
 ### Discipline Agents
 
 <table><tr>
-<td align="center"><img src=".github/assets/sisyphus.png" height="300" /></td>
-<td align="center"><img src=".github/assets/hephaestus.png" height="300" /></td>
+<td align="center"><img src=".github/assets/arthas.png" height="300" /></td>
+<td align="center"><img src=".github/assets/illidan.png" height="300" /></td>
 </tr></table>
 
-**Sisyphus** (`claude-opus-4-7` / **`kimi-k2.6`** / **`glm-5`** ) is your main orchestrator. He plans, delegates to specialists, and drives tasks to completion with aggressive parallel execution. He does not stop halfway.
+<sub>Agent artwork: [Arthas](https://commons.wikimedia.org/wiki/File:Arthas_Menethil_(World_of_Warcraft)_7w7.jpg) by RockSkaPunkMetal and [Illidan](https://commons.wikimedia.org/wiki/File:Cosplay_at_Lucca_Comics_2015_-_Illidan_01.jpg) by Syrio, CC BY-SA 4.0, via Wikimedia Commons.</sub>
 
-**Hephaestus** (`gpt-5.6-sol` on OpenAI or Vercel, then `gpt-5.5`) is your autonomous deep worker. Give him a goal, not a recipe. He explores the codebase, researches patterns, and executes end-to-end without hand-holding. *The Legitimate Craftsman.*
+**Arthas** (`claude-opus-4-7` / **`kimi-k2.6`** / **`glm-5`** ) is your main orchestrator. He plans, delegates to specialists, and drives tasks to completion with aggressive parallel execution. He does not stop halfway.
 
-**Prometheus** (`claude-opus-4-7` / **`gpt-5.5`** / **`glm-5.2`** ) is your strategic planner. Interview mode: he asks questions, identifies scope, and builds a detailed plan before a single line of code is touched.
+**Illidan** (`gpt-5.6-sol` on OpenAI or Vercel, then `gpt-5.5`) is your autonomous deep worker. Give him a goal, not a recipe. He explores the codebase, researches patterns, and executes end-to-end without hand-holding. *The Legitimate Craftsman.*
+
+**Khadgar** (`claude-opus-4-7` / **`gpt-5.5`** / **`glm-5.2`** ) is your strategic planner. Interview mode: he asks questions, identifies scope, and builds a detailed plan before a single line of code is touched.
 
 Every agent is tuned to its model's specific strengths. No manual model juggling. [Learn more →](docs/guide/overview.md)
 
-> Anthropic [blocked OpenCode because of us.](https://x.com/thdxr/status/2010149530486911014) That's why Hephaestus is called "The Legitimate Craftsman." The irony is intentional.
+> Anthropic [blocked OpenCode because of us.](https://x.com/thdxr/status/2010149530486911014) That's why Illidan is called "The Legitimate Craftsman." The irony is intentional.
 >
 > We run best on Opus, but Kimi K2.6 + GPT-5.5 already beats vanilla Claude Code. Zero config needed.
 
@@ -279,7 +273,7 @@ Restart opencode and the `team_*` tool family unlocks. Two skills already ride o
 
 ### Agent Orchestration
 
-When Sisyphus delegates to a subagent, it doesn't pick a model. It picks a **category**. The category maps automatically to the right model:
+When Arthas delegates to a subagent, it doesn't pick a model. It picks a **category**. The category maps automatically to the right model:
 
 | Category             | What it's for                      |
 | :------------------- | :--------------------------------- |
@@ -346,11 +340,11 @@ project/
 
 Agents auto-read relevant context. Zero manual management.
 
-### Planning. Prometheus
+### Planning. Khadgar
 
 Complex task? Don't prompt and pray.
 
-`/start-work` calls Prometheus. He **interviews you like a real engineer**, identifies scope and ambiguities, and builds a verified plan before touching code. The agent knows what it's building before it starts.
+`/start-work` calls Khadgar. He **interviews you like a real engineer**, identifies scope and ambiguities, and builds a verified plan before touching code. The agent knows what it's building before it starts.
 
 ### Skills
 
@@ -425,7 +419,7 @@ Features you'll think should've always existed. Once you use them, you can't go 
 See full [Features Documentation](docs/reference/features.md).
 
 **Quick Overview:**
-- **Agents**: Sisyphus (the main agent), Prometheus (planner), Oracle (architecture/debugging), Librarian (docs/code search), Explore (fast codebase grep), Multimodal Looker
+- **Agents**: Arthas (the main agent), Khadgar (planner), Medivh (architecture/debugging), Chromie (docs/code search), Brann (fast codebase grep), Alleria
 - **Background Agents**: Run multiple agents in parallel like a real dev team
 - **LSP & AST Tools**: Refactoring, rename, diagnostics, AST-aware code search
 - **Hash-anchored Edit Tool**: `LINE#ID` references validate content before applying every change. Surgical edits, zero stale-line errors
@@ -451,7 +445,7 @@ See [Configuration Documentation](docs/reference/configuration.md).
 - **JSONC Support**: Comments and trailing commas supported
 - **Agents**: Override models, temperatures, prompts, and permissions for any agent
 - **Built-in Skills**: `playwright` (browser automation), `git-master` (atomic commits)
-- **Sisyphus Agent**: Main orchestrator with Prometheus (Planner) and Metis (Plan Consultant)
+- **Arthas Agent**: Main orchestrator with Khadgar (Planner) and Jaina (Plan Consultant)
 - **Background Tasks**: Configure concurrency limits per provider/model
 - **Categories**: Domain-specific task delegation (`visual`, `business-logic`, custom)
 - **Hooks**: 54+ lifecycle hooks (61 with Team Mode), all configurable via `disabled_hooks`

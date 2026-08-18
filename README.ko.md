@@ -16,35 +16,28 @@
 > [!TIP]
 > **Building in Public**
 >
-> 메인테이너는 oh-my-openagent를 실시간으로 개발하고 유지보수합니다. OpenClaw를 크게 커스터마이즈한 포크 위에서 동작하는 AI 어시스턴트 Jobdori와 함께요.
 > 모든 기능, 모든 수정, 모든 이슈 트리아지 — 전부 Discord에서 라이브로.
 >
 > [![Building in Public](./.github/assets/building-in-public.png)](https://discord.gg/PUwSMR9XNk)
 >
 > [**→ #building-in-public 채널에서 지켜보기**](https://discord.gg/PUwSMR9XNk)
 
-> [!NOTE]
->
-> [![Sisyphus Labs - Meet Dori. Not a demo. Subscribes to everything.](./.github/assets/sisyphuslabs.png?v=4)](https://sisyphuslabs.ai)
-> > **OmO는 위의 Jobdori에 의해 메인테이닝되고 있습니다. 당신의 Jobdori, Dori를 만나세요. <br />대기 명단은 [여기](https://sisyphuslabs.ai)에서 받습니다.**
 
 > [!TIP]
 > 함께해요!
 >
 > | [<img alt="Discord link" src="https://img.shields.io/discord/1452487457085063218?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square" width="156px" />](https://discord.gg/PUwSMR9XNk) | 기여자와 `oh-my-openagent` 사용자들을 만나려면 [Discord 커뮤니티](https://discord.gg/PUwSMR9XNk)로 오세요. |
 > | :-----| :----- |
-> | [<img alt="X link" src="https://img.shields.io/badge/Follow-%40justsisyphus-00CED1?style=flat-square&logo=x&labelColor=black" width="156px" />](https://x.com/justsisyphus) | 원래 제 X 계정에서 `oh-my-openagent` 업데이트를 올렸는데, 계정이 실수로 정지되어 지금은 [@justsisyphus](https://x.com/justsisyphus)에서 대신 업데이트가 올라옵니다. |
-> | [<img alt="GitHub Follow" src="https://img.shields.io/github/followers/code-yeongyu?style=flat-square&logo=github&labelColor=black&color=24292f" width="156px" />](https://github.com/code-yeongyu) | 다른 프로젝트도 궁금하다면 GitHub에서 [@code-yeongyu](https://github.com/code-yeongyu)를 팔로우하세요. |
 
 <!-- <CENTERED SECTION FOR GITHUB DISPLAY> -->
 
 <div align="center">
 
-<a href="https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent"><img src="./.github/assets/omo-logo.png" alt="OmO" width="200" /></a>
+<a href="https://github.com/mburgc/oh-my-openagent#oh-my-openagent"><img src="./.github/assets/omo-logo.png" alt="OmO" width="200" /></a>
 
-[![Oh My OpenAgent](./.github/assets/hero.jpg)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent)
+[![Oh My OpenAgent](./.github/assets/hero.jpg)](https://github.com/mburgc/oh-my-openagent#oh-my-openagent)
 
-[![Preview](./.github/assets/omo.png)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent)
+[![Preview](./.github/assets/omo.png)](https://github.com/mburgc/oh-my-openagent#oh-my-openagent)
 
 </div>
 
@@ -58,14 +51,14 @@
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/code-yeongyu/oh-my-openagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/mburgc/oh-my-openagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/mburgc/oh-my-openagent/releases)
 [![npm downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fomo.dev%2Fapi%2Fnpm-downloads&style=flat-square)](https://www.npmjs.com/package/oh-my-opencode)
-[![GitHub Contributors](https://img.shields.io/github/contributors/code-yeongyu/oh-my-openagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/graphs/contributors)
-[![GitHub Forks](https://img.shields.io/github/forks/code-yeongyu/oh-my-openagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/network/members)
-[![GitHub Stars](https://img.shields.io/github/stars/code-yeongyu/oh-my-openagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/code-yeongyu/oh-my-openagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/issues)
-[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/blob/dev/LICENSE.md)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/code-yeongyu/oh-my-openagent)
+[![GitHub Contributors](https://img.shields.io/github/contributors/mburgc/oh-my-openagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/mburgc/oh-my-openagent/graphs/contributors)
+[![GitHub Forks](https://img.shields.io/github/forks/mburgc/oh-my-openagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/mburgc/oh-my-openagent/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/mburgc/oh-my-openagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/mburgc/oh-my-openagent/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/mburgc/oh-my-openagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/mburgc/oh-my-openagent/issues)
+[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/mburgc/oh-my-openagent/blob/dev/LICENSE.md)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/mburgc/oh-my-openagent)
 [![Docs](https://img.shields.io/badge/docs-omo.vibetip.help-369eff?labelColor=black&logo=readthedocs&logoColor=white&style=flat-square)](https://omo.vibetip.help/docs)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-cn.md)
@@ -78,7 +71,7 @@
 
 > "Cursor 구독을 해지하게 만들었습니다. 오픈소스 커뮤니티에서 믿기지 않는 일들이 벌어지고 있어요." - [Arthur Guiot](https://x.com/arthur_guiot/status/2008736347092382053?s=20)
 
-> "Claude Code가 7일에 하는 일을 사람이 3개월 걸려 한다고 치면, Sisyphus는 1시간 만에 끝냅니다. 태스크가 끝날 때까지 그냥 돌아갑니다. 말 그대로 기강 잡힌 에이전트예요." <br/>- B, 퀀트 리서처
+> "Claude Code가 7일에 하는 일을 사람이 3개월 걸려 한다고 치면, Arthas는 1시간 만에 끝냅니다. 태스크가 끝날 때까지 그냥 돌아갑니다. 말 그대로 기강 잡힌 에이전트예요." <br/>- B, 퀀트 리서처
 
 > "Oh My Opencode로 하루 만에 eslint 경고 8000개를 날려버렸습니다." <br/>- [Jacob Ferrari](https://x.com/jacobferrari_/status/2003258761952289061)
 
@@ -117,7 +110,7 @@ oh-my-openagent를 설치하세요. `ultrawork`를 입력하세요. 끝.
 
 ```
 Install and configure oh-my-openagent by following the instructions here:
-https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+https://raw.githubusercontent.com/mburgc/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
 ```
 
 아니면 [설치 가이드](docs/guide/installation.md)를 직접 읽으셔도 됩니다. 다만 진심으로, 에이전트한테 시키세요. 사람은 설정 파일을 오타로 망칩니다.
@@ -127,7 +120,7 @@ https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/do
 설치 가이드를 받아와서 그대로 따르세요:
 
 ```bash
-curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+curl -s https://raw.githubusercontent.com/mburgc/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
 ```
 
 **참고**: 배포된 npm 패키지와 CLI 바이너리 이름은 여전히 `oh-my-opencode`입니다(전환 기간 동안 `oh-my-openagent`로도 함께 배포됩니다). `opencode.json` 안에서는 호환성 레이어가 이제 `oh-my-openagent` 플러그인 엔트리를 우선합니다. 기존 `oh-my-opencode` 엔트리도 경고와 함께 여전히 로드됩니다. 플러그인 설정 파일도 여전히 `oh-my-opencode.json`이나 `oh-my-opencode.jsonc`를 많이 씁니다. 전환 기간 동안에는 기존 이름과 새 이름 둘 다 인식됩니다.
@@ -143,7 +136,7 @@ curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/head
 이제 문서 읽는 시대는 지났습니다. 그냥 아래를 에이전트에 붙여넣으세요:
 
 ```
-Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/README.md
+Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/mburgc/oh-my-openagent/refs/heads/dev/README.md
 ```
 
 
@@ -165,7 +158,7 @@ Read this and tell me why it's not just another boilerplate: https://raw.githubu
 
 |       | 기능                                                      | Editions | 하는 일                                                                                                                                                                                                          |
 | :---: | :------------------------------------------------------- | :------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   🤖   | **Discipline Agents**                                    | Ultimate | Sisyphus가 Hephaestus, Oracle, Librarian, Explore를 지휘합니다. 병렬로 도는 풀스택 AI 개발팀.                                                                                                                    |
+|   🤖   | **Discipline Agents**                                    | Ultimate | Arthas가 Illidan, Medivh, Chromie, Brann를 지휘합니다. 병렬로 도는 풀스택 AI 개발팀.                                                                                                                    |
 |   🧩   | **Codex CLI Light Edition**                              | Light    | OpenAI Codex CLI에서 동작하는 omo의 8개 포팅 컴포넌트(rules, comment-checker, git-bash, LSP, ultrawork, ulw-loop, start-work continuation, telemetry). 설치: `npx lazycodex-ai install`.                                                   |
 |   👥   | **Team Mode** (v4.0, opt-in)                             | Ultimate | 리드 에이전트 + 최대 8명의 병렬 멤버, 실시간 tmux 시각화, 전용 `team_*` 도구. `hyperplan`(5명의 적대적 비평가)과 `security-research`(3명의 헌터 + 2명의 PoC 엔지니어)를 구동합니다. [문서 →](docs/guide/team-mode.md) |
 |   ⚡   | **`ultrawork` / `ulw`**                                  | Both     | 한 단어. 모든 에이전트(Ultimate)나 Codex `ultrawork` 컴포넌트(Light)가 켜집니다. 끝날 때까지 멈추지 않습니다.                                                                                                    |
@@ -182,7 +175,7 @@ Read this and tell me why it's not just another boilerplate: https://raw.githubu
 |   🖥️   | **Tmux Integration**                                     | Ultimate | 풀 인터랙티브 터미널. REPL, 디버거, TUI 전부 라이브.                                                                                                                                                             |
 |   🔌   | **Claude Code Compatible**                               | Ultimate | 쓰시던 hook, command, skill, MCP, plugin 전부 그대로 동작합니다. (Codex는 자체 플러그인 시스템 보유.)                                                                                                            |
 |   🎯   | **Skill-Embedded MCPs**                                  | Ultimate | 스킬이 자기만의 MCP 서버를 들고 다닙니다. 컨텍스트 낭비 없음.                                                                                                                                                   |
-|   📋   | **Prometheus Planner**                                   | Ultimate | 실행 전 인터뷰 모드로 전략 플래닝.                                                                                                                                                                               |
+|   📋   | **Khadgar Planner**                                   | Ultimate | 실행 전 인터뷰 모드로 전략 플래닝.                                                                                                                                                                               |
 |   🔍   | **`/init-deep`**                                         | Ultimate | 프로젝트 전반에 계층형 `AGENTS.md` 파일을 자동 생성합니다. 토큰 효율에도, 에이전트 성능에도 좋습니다.                                                                                                            |
 
 > **Editions legend.** **Ultimate** = OpenCode 전용 (`bunx oh-my-openagent install`). **Light** = Codex CLI 전용 (`bunx oh-my-openagent install --platform=codex`). **Both** = 두 에디션 모두 제공, 종종 내부 구현은 약간 다름.
@@ -190,19 +183,21 @@ Read this and tell me why it's not just another boilerplate: https://raw.githubu
 ### Discipline Agents
 
 <table><tr>
-<td align="center"><img src=".github/assets/sisyphus.png" height="300" /></td>
-<td align="center"><img src=".github/assets/hephaestus.png" height="300" /></td>
+<td align="center"><img src=".github/assets/arthas.png" height="300" /></td>
+<td align="center"><img src=".github/assets/illidan.png" height="300" /></td>
 </tr></table>
 
-**Sisyphus** (`claude-opus-4-7` / **`kimi-k2.6`** / **`glm-5`**)는 메인 오케스트레이터입니다. 계획을 세우고, 전문가에게 위임하고, 공격적인 병렬 실행으로 작업을 끝까지 밀어붙입니다. 중간에 멈추지 않습니다.
+<sub>Agent artwork: [Arthas](https://commons.wikimedia.org/wiki/File:Arthas_Menethil_(World_of_Warcraft)_7w7.jpg) by RockSkaPunkMetal and [Illidan](https://commons.wikimedia.org/wiki/File:Cosplay_at_Lucca_Comics_2015_-_Illidan_01.jpg) by Syrio, CC BY-SA 4.0, via Wikimedia Commons.</sub>
 
-**Hephaestus** (OpenAI 또는 Vercel에서 `gpt-5.6-sol`, 그다음 `gpt-5.5`)는 자율적으로 깊게 파는 작업자입니다. 레시피가 아니라 목표를 주세요. 코드베이스를 탐색하고, 패턴을 조사하고, 손을 잡아주지 않아도 엔드투엔드로 실행합니다. *The Legitimate Craftsman.*
+**Arthas** (`claude-opus-4-7` / **`kimi-k2.6`** / **`glm-5`**)는 메인 오케스트레이터입니다. 계획을 세우고, 전문가에게 위임하고, 공격적인 병렬 실행으로 작업을 끝까지 밀어붙입니다. 중간에 멈추지 않습니다.
 
-**Prometheus** (`claude-opus-4-7` / **`gpt-5.5`** / **`glm-5.2`**)는 전략 플래너입니다. 인터뷰 모드: 질문으로 스코프를 파악하고, 코드에 손대기 전에 상세한 계획을 만듭니다.
+**Illidan** (OpenAI 또는 Vercel에서 `gpt-5.6-sol`, 그다음 `gpt-5.5`)는 자율적으로 깊게 파는 작업자입니다. 레시피가 아니라 목표를 주세요. 코드베이스를 탐색하고, 패턴을 조사하고, 손을 잡아주지 않아도 엔드투엔드로 실행합니다. *The Legitimate Craftsman.*
+
+**Khadgar** (`claude-opus-4-7` / **`gpt-5.5`** / **`glm-5.2`**)는 전략 플래너입니다. 인터뷰 모드: 질문으로 스코프를 파악하고, 코드에 손대기 전에 상세한 계획을 만듭니다.
 
 모든 에이전트는 자기 모델의 강점에 맞춰 튜닝되어 있습니다. 수동으로 모델을 돌려가며 쓸 필요가 없습니다. [더 알아보기 →](docs/guide/overview.md)
 
-> Anthropic은 [우리 때문에 OpenCode를 차단했습니다.](https://x.com/thdxr/status/2010149530486911014) 그래서 Hephaestus에게 "The Legitimate Craftsman"이라는 별명이 붙었습니다. 의도된 아이러니입니다.
+> Anthropic은 [우리 때문에 OpenCode를 차단했습니다.](https://x.com/thdxr/status/2010149530486911014) 그래서 Illidan에게 "The Legitimate Craftsman"이라는 별명이 붙었습니다. 의도된 아이러니입니다.
 >
 > Opus에서 가장 잘 돌지만, Kimi K2.6 + GPT-5.5 조합만으로도 이미 바닐라 Claude Code를 이깁니다. 별도 설정 없이요.
 
@@ -232,7 +227,7 @@ opencode를 재시작하면 `team_*` 도구 패밀리가 활성화됩니다. 이
 
 ### Agent Orchestration
 
-Sisyphus가 서브에이전트에 위임할 때는 모델을 직접 고르지 않습니다. **카테고리**를 고릅니다. 카테고리는 자동으로 적합한 모델에 매핑됩니다:
+Arthas가 서브에이전트에 위임할 때는 모델을 직접 고르지 않습니다. **카테고리**를 고릅니다. 카테고리는 자동으로 적합한 모델에 매핑됩니다:
 
 | 카테고리               | 용도                                 |
 | :------------------- | :--------------------------------- |
@@ -299,11 +294,11 @@ project/
 
 에이전트는 관련 컨텍스트를 알아서 읽습니다. 수동 관리 0.
 
-### 플래닝. Prometheus
+### 플래닝. Khadgar
 
 복잡한 작업인가요? 프롬프트 쓰고 기도하지 마세요.
 
-`/start-work`가 Prometheus를 호출합니다. **진짜 엔지니어처럼 인터뷰**를 진행하고, 스코프와 모호한 부분을 짚어내고, 코드에 손대기 전에 검증된 계획을 세웁니다. 에이전트는 뭘 만들지 알고 나서야 시작합니다.
+`/start-work`가 Khadgar를 호출합니다. **진짜 엔지니어처럼 인터뷰**를 진행하고, 스코프와 모호한 부분을 짚어내고, 코드에 손대기 전에 검증된 계획을 세웁니다. 에이전트는 뭘 만들지 알고 나서야 시작합니다.
 
 ### Skills
 
@@ -372,7 +367,7 @@ oh-my-openagent를 제거하려면:
 전체 내용은 [Features Documentation](docs/reference/features.md) 참고.
 
 **요약:**
-- **Agents**: Sisyphus(메인), Prometheus(플래너), Oracle(아키텍처·디버깅), Librarian(문서·코드 검색), Explore(빠른 코드베이스 grep), Multimodal Looker
+- **Agents**: Arthas(메인), Khadgar(플래너), Medivh(아키텍처·디버깅), Chromie(문서·코드 검색), Brann(빠른 코드베이스 grep), Alleria
 - **Background Agents**: 진짜 개발팀처럼 여러 에이전트를 병렬로 실행
 - **LSP & AST Tools**: 리팩터링, rename, 진단, AST 기반 코드 검색
 - **Hash-anchored Edit Tool**: `LINE#ID` 참조로 모든 변경 전에 내용을 검증. 수술적 편집, 낡은 라인 에러 0
@@ -398,7 +393,7 @@ oh-my-openagent를 제거하려면:
 - **JSONC 지원**: 주석과 trailing comma 지원
 - **Agents**: 어떤 에이전트든 모델, temperature, 프롬프트, 권한을 오버라이드
 - **Built-in Skills**: `playwright`(브라우저 자동화), `git-master`(atomic 커밋)
-- **Sisyphus Agent**: Prometheus(플래너), Metis(플랜 컨설턴트)와 함께 도는 메인 오케스트레이터
+- **Arthas Agent**: Khadgar(플래너), Jaina(플랜 컨설턴트)와 함께 도는 메인 오케스트레이터
 - **Background Tasks**: 프로바이더/모델별 동시성 제한 설정
 - **Categories**: 도메인별 태스크 위임(`visual`, `business-logic`, 커스텀)
 - **Hooks**: 54개 이상의 라이프사이클 hook (Team Mode 활성화 시 61개), 전부 `disabled_hooks`로 제어 가능
