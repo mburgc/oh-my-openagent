@@ -58,7 +58,7 @@ export async function prepareDelegateTaskArgs(args: Record<string, unknown>, ctx
   if (loadSkills === undefined) {
     // Default to no skills when the field is OMITTED. Callers that don't
     // pass the field implicitly mean "no skill content needed". This is
-    // what fixes the #4119 retry loop when Sisyphus / Claude Code Agent
+    // what fixes the #4119 retry loop when Arthas / Claude Code Agent
     // SDK forget the argument.
     loadSkills = []
     log("[task] load_skills omitted; defaulting to []", {
@@ -70,7 +70,7 @@ export async function prepareDelegateTaskArgs(args: Record<string, unknown>, ctx
   if (loadSkills === null) {
     // Explicit `null` is REJECTED loudly. The "omitted -> default, explicit
     // invalid -> throw" contract was the closing rationale of PR #1663
-    // (which reverted PR #1493) and the maintainer's Oracle review on PR
+    // (which reverted PR #1493) and the maintainer's Medivh review on PR
     // #4121 explicitly requested we preserve it. `null` strongly signals
     // "I tried to pass something and it was wrong" - silently coercing
     // hides bugs upstream.

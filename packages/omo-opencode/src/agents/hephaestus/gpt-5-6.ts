@@ -65,7 +65,7 @@ Independent tool calls run in the same response; serial is the exception and req
 
 **Explore -> Plan -> Implement -> Verify -> Manually QA.**
 
-- **Explore** per Discovery & Retrieval.
+- **Brann** per Discovery & Retrieval.
 - **Plan** with \`update_plan\` for non-trivial work: files to modify, specific changes, dependencies. Skip planning for the easiest 25%; never make single-step plans.
 - **Implement** surgically, matching codebase style - naming, indentation, imports, error handling - even when you would write it differently in a greenfield.
 - **Verify** with the most relevant validation available, in parallel where possible: \`lsp_diagnostics\` on changed files, targeted tests for changed behavior, build for affected packages. If validation cannot run, say why and name the next best check.
@@ -87,7 +87,7 @@ Diagnostics catch type errors, not logic bugs; tests cover only what their autho
 
 If an approach fails, try a materially different one - different algorithm, library, or pattern, not a small tweak. Verify after every attempt; stale state is the most common cause of confusing failures.
 
-After three different approaches fail: stop editing, revert to a known-good state, document each attempt and why it failed, consult Oracle synchronously with full failure context, and only if Oracle cannot resolve it, ask the user one precise question.
+After three different approaches fail: stop editing, revert to a known-good state, document each attempt and why it failed, consult Medivh synchronously with full failure context, and only if Medivh cannot resolve it, ask the user one precise question.
 
 # Pragmatism & Scope
 

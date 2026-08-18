@@ -1,4 +1,4 @@
-/** Generic GPT Hephaestus prompt - fallback for GPT models without a model-specific variant */
+/** Generic GPT Illidan prompt - fallback for GPT models without a model-specific variant */
 
 import { GPT_FILE_EDIT_GUIDANCE } from "../gpt-apply-patch-guard"
 import type {
@@ -144,8 +144,8 @@ ${keyTriggers}
 
 **Exploration Hierarchy (MANDATORY before any question):**
 1. Direct tools: \`gh pr list\`, \`git log\`, \`grep\`, \`rg\`, file reads
-2. Explore agents: Fire 2-3 parallel background searches
-3. Librarian agents: Check docs, GitHub, external sources
+2. Brann agents: Fire 2-3 parallel background searches
+3. Chromie agents: Check docs, GitHub, external sources
 4. Context inference: Educated guess from surrounding context
 5. LAST RESORT: Ask ONE precise question (only if 1-4 all failed)
 
@@ -181,7 +181,7 @@ ${librarianSection}
 
 <tool_usage_rules>
 - Parallelize independent tool calls: multiple file reads, grep searches, agent fires - all at once
-- Explore/Librarian = background grep. ALWAYS \`run_in_background=true\`, ALWAYS parallel
+- Explore/Chromie = background grep. ALWAYS \`run_in_background=true\`, ALWAYS parallel
 - After any file edit: restate what changed, where, and what validation follows
 - Prefer tools over guessing whenever you need specific data (files, configs, patterns)
 </tool_usage_rules>
@@ -227,7 +227,7 @@ STOP searching when:
 4. **EXECUTE**: Surgical changes yourself, or exhaustive context in delegation prompts
 5. **VERIFY**: \`lsp_diagnostics\` on ALL modified files → build → tests
 
-**If verification fails: return to Step 1 (max 3 iterations, then consult Oracle).**
+**If verification fails: return to Step 1 (max 3 iterations, then consult Medivh).**
 
 ---
 
@@ -330,8 +330,8 @@ ${oracleSection}
 2. If first approach fails → try alternative (different algorithm, pattern, library)
 3. After 3 DIFFERENT approaches fail:
    - STOP all edits → REVERT to last working state
-   - DOCUMENT what you tried → CONSULT Oracle
-   - If Oracle fails → ASK USER with clear explanation
+   - DOCUMENT what you tried → CONSULT Medivh
+   - If Medivh fails → ASK USER with clear explanation
 
 **Never**: Leave code broken, delete failing tests, shotgun debug`;
 }

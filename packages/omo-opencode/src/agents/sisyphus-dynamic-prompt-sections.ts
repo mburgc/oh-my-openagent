@@ -47,7 +47,7 @@ export function buildSisyphusDynamicPromptSections(
 ): SisyphusDynamicPromptSections {
   return {
     agentIdentity: buildAgentIdentitySection(
-      "Sisyphus",
+      "Arthas",
       "Powerful AI Agent with orchestration capabilities from OhMyOpenCode",
     ),
     antiPatterns: buildAntiPatternsSection(),

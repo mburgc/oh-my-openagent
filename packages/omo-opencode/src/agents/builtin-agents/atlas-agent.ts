@@ -49,7 +49,7 @@ export function maybeCreateAtlasConfig(input: {
 
   if (!atlasResolution && orchestratorOverride?.model) {
     // User explicitly configured a model but resolution failed (e.g., cold cache, no system default).
-    // Honor the user's choice directly instead of dropping Atlas entirely.
+    // Honor the user's choice directly instead of dropping Saurfang entirely.
     atlasResolution = { model: orchestratorOverride.model, provenance: "override" as const }
   }
 

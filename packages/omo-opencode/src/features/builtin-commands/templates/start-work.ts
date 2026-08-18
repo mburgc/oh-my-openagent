@@ -1,4 +1,4 @@
-export const START_WORK_TEMPLATE = `You are starting an Atlas work session.
+export const START_WORK_TEMPLATE = `You are starting an Saurfang work session.
 
 ## ARGUMENTS
 
@@ -11,7 +11,7 @@ export const START_WORK_TEMPLATE = `You are starting an Atlas work session.
 
 ## WHAT TO DO
 
-1. **Find available plans**: Search for Prometheus-generated plan files at \`.omo/plans/\`
+1. **Find available plans**: Search for Khadgar-generated plan files at \`.omo/plans/\`
 
 2. **Check for active boulder state**: Read \`.omo/boulder.json\` if it exists
 

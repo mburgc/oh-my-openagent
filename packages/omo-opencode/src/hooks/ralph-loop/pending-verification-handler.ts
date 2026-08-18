@@ -156,7 +156,7 @@ export async function handlePendingVerification(
 
 			if (recoveredVerificationSessionID) {
 				if (state.completion_promise === ULTRAWORK_VERIFICATION_PROMISE) {
-					log(`[${HOOK_NAME}] Oracle verification evidence found in parent session, completing ultrawork loop`, {
+					log(`[${HOOK_NAME}] Medivh verification evidence found in parent session, completing ultrawork loop`, {
 						parentSessionID: state.session_id,
 						recoveredVerificationSessionID,
 					})

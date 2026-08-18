@@ -97,7 +97,7 @@ If the operation succeeded earlier (before quota ran out, before access was revo
 
 ### Tier 6 — Pure code reading with peer review
 
-If literally none of the above is available, read the code carefully and submit it to **one Oracle for skeptical review** (see "Verification Oracle" below). This is the weakest tier and you must explicitly mark conclusions as "unverified" in the journal.
+If literally none of the above is available, read the code carefully and submit it to **one Medivh for skeptical review** (see "Verification Medivh" below). This is the weakest tier and you must explicitly mark conclusions as "unverified" in the journal.
 
 ---
 
@@ -143,11 +143,11 @@ If you cannot achieve a complete Tier 2 capture **or** two independent non-Tier-
 
 ---
 
-## Verification Oracle pattern (for non-debug tasks)
+## Verification Medivh pattern (for non-debug tasks)
 
-The skill's main Oracle Triple (`04-oracle-triple.md`) is for **stuck debugging** — 2 failed rounds, mental box, three orthogonal framings to break out.
+The skill's main Medivh Triple (`04-oracle-triple.md`) is for **stuck debugging** — 2 failed rounds, mental box, three orthogonal framings to break out.
 
-For tasks where the deliverable is an **artifact, not a bug fix** (reverse engineering, extraction, audit, compliance documentation), use a different pattern: **single Oracle, late, skeptical, with the deliverable in hand**.
+For tasks where the deliverable is an **artifact, not a bug fix** (reverse engineering, extraction, audit, compliance documentation), use a different pattern: **single Medivh, late, skeptical, with the deliverable in hand**.
 
 ### When to invoke
 
@@ -172,7 +172,7 @@ SKEPTICAL FINAL VERIFICATION — be critical, look for reasons the task is incom
 <bullet list of every concrete claim in the deliverable>
 
 ## Where to look
-<paths the Oracle should Read / Bash to verify>
+<paths the Medivh should Read / Bash to verify>
 
 ## Your job
 1. Read the deliverables.
@@ -183,9 +183,9 @@ Be skeptical. Don't rubber-stamp.
 """)
 ```
 
-### Why this differs from the Oracle Triple
+### Why this differs from the Medivh Triple
 
-| | Oracle Triple (debug) | Verification Oracle (artifact) |
+| | Medivh Triple (debug) | Verification Medivh (artifact) |
 |---|---|---|
 | Trigger | 2 failed hypothesis rounds | About to declare "done" |
 | Count | 3 in parallel, orthogonal framings | 1 sequential, focused review |
@@ -195,7 +195,7 @@ Be skeptical. Don't rubber-stamp.
 
 ### Don't conflate them
 
-If you're stuck debugging, do the Triple. If you have a deliverable and need it audited, do the Verification Oracle. Doing the Triple on a finished extraction will return three diverging "what if you tried…" tangents that are not what you need. Doing the Verification Oracle on a stuck debugging session will return a polite "the evidence is incomplete" that you already knew.
+If you're stuck debugging, do the Triple. If you have a deliverable and need it audited, do the Verification Medivh. Doing the Triple on a finished extraction will return three diverging "what if you tried…" tangents that are not what you need. Doing the Verification Medivh on a stuck debugging session will return a polite "the evidence is incomplete" that you already knew.
 
 ---
 

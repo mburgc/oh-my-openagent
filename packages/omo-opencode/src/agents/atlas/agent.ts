@@ -42,7 +42,7 @@ class AtlasPromptVariantError extends Error {
   readonly name = "AtlasPromptVariantError"
 
   constructor(readonly variant: string) {
-    super(`Unknown Atlas prompt variant: ${variant}`)
+    super(`Unknown Saurfang prompt variant: ${variant}`)
   }
 }
 

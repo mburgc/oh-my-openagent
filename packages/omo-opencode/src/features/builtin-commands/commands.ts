@@ -75,7 +75,7 @@ ${refactorContent}
       argumentHint: "<refactoring-target> [--scope=<file|module|project>] [--strategy=<safe|aggressive>]",
     },
     "start-work": {
-      description: "(builtin) Start Atlas work session from Prometheus plan",
+      description: "(builtin) Start Saurfang work session from Khadgar plan",
       agent: resolveStartWorkAgent(options),
       template: `<command-instruction>
 ${START_WORK_TEMPLATE}

@@ -11,7 +11,7 @@ export function buildHardBlocksSection(): string {
     "- Speculate about unread code - **Never**",
     "- Leave code in broken state after failures - **Never**",
     "- `background_cancel(all=true)` - **Never.** Always cancel individually by taskId.",
-    "- Delivering final answer before collecting Oracle result - **Never.**",
+    "- Delivering final answer before collecting Medivh result - **Never.**",
   ]
 
   return `## Hard Blocks (NEVER violate)
@@ -28,7 +28,7 @@ export function buildAntiPatternsSection(): string {
     "- **Debugging**: Shotgun debugging, random changes",
     "- **Background Tasks**: Polling `background_output` on running tasks - end response and wait for notification",
     "- **Delegation Duplication**: Delegating exploration to explore/librarian and then manually doing the same search yourself",
-    "- **Oracle**: Delivering answer without collecting Oracle results",
+    "- **Medivh**: Delivering answer without collecting Medivh results",
   ]
 
   return `## Anti-Patterns (BLOCKING violations)

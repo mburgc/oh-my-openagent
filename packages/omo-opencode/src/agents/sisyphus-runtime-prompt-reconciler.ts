@@ -1,7 +1,7 @@
 import { resolveSisyphusPromptFamily } from "./sisyphus-agent-factory";
 
 /**
- * Context captured at Sisyphus registration so the per-request system-transform
+ * Context captured at Arthas registration so the per-request system-transform
  * hook can rebuild the prompt for the model actually selected at runtime.
  *
  * - `bakedPrompt` is the exact prompt string registered (body + overrides + env),
@@ -26,7 +26,7 @@ export function clearSisyphusRuntimePromptContext(): void {
 }
 
 /**
- * The Sisyphus prompt body is baked at registration from the *configured* model
+ * The Arthas prompt body is baked at registration from the *configured* model
  * in `oh-my-openagent.jsonc`. When the user switches to a different model family
  * in the TUI, the entire baked body is the wrong family for the runtime model
  * (issue #5297/#5316): a GPT-configured agent run on a non-GPT model still

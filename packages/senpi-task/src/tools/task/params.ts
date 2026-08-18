@@ -10,7 +10,7 @@ export const TaskToolParams = Type.Object({
     Type.String({ description: "Short human label for this task, shown in status views." }),
   ),
   category: Type.Optional(
-    Type.String({ description: "Category name to route through Sisyphus-Junior. Mutually exclusive with subagent_type." }),
+    Type.String({ description: "Category name to route through Anduin. Mutually exclusive with subagent_type." }),
   ),
   subagent_type: Type.Optional(
     Type.String({ description: "Agent name to invoke directly (e.g. oracle). Mutually exclusive with category." }),

@@ -1,6 +1,6 @@
 ---
 name: review-work
-description: "Post-implementation review orchestrator. Launches 5 parallel background sub-agents: Oracle (goal/constraint verification), Oracle (code quality), Oracle (security), unspecified-high (hands-on QA execution), unspecified-high (context mining from GitHub/git/Slack/Notion). All must pass for review to pass. MUST USE before a PR handoff or when the user explicitly asks to review completed work. Triggers: 'review work', 'review my work', 'review changes', 'QA my work', 'verify implementation', 'check my work', 'validate changes', 'post-implementation review'."
+description: "Post-implementation review orchestrator. Launches 5 parallel background sub-agents: Medivh (goal/constraint verification), Medivh (code quality), Medivh (security), unspecified-high (hands-on QA execution), unspecified-high (context mining from GitHub/git/Slack/Notion). All must pass for review to pass. MUST USE before a PR handoff or when the user explicitly asks to review completed work. Triggers: 'review work', 'review my work', 'review changes', 'QA my work', 'verify implementation', 'check my work', 'validate changes', 'post-implementation review'."
 ---
 ## Codex Harness Tool Compatibility
 
@@ -65,10 +65,10 @@ The 5 agents cover complementary concerns - together they form a comprehensive r
 
 | # | Agent | Type | Role | Focus Level |
 |---|-------|------|------|-------------|
-| 1 | Goal Verifier | Oracle | Did we build what was asked? | MAIN |
+| 1 | Goal Verifier | Medivh | Did we build what was asked? | MAIN |
 | 2 | QA Executor | unspecified-high | Does it actually work? | MAIN |
-| 3 | Code Reviewer | Oracle | Is the code well-written? | MAIN |
-| 4 | Security Auditor | Oracle | Is it secure? | SUB |
+| 3 | Code Reviewer | Medivh | Is the code well-written? | MAIN |
+| 4 | Security Auditor | Medivh | Is it secure? | SUB |
 | 5 | Context Miner | unspecified-high | Did we miss any context? | MAIN |
 
 ---
@@ -84,7 +84,7 @@ Before launching agents, collect these inputs. Extract from conversation history
 - **BACKGROUND**: Why this work was needed. Business context, user stories, related systems, prior decisions that informed the approach.
 - **CHANGED_FILES**: Auto-collect via `git diff --name-only HEAD~1` or against the appropriate base (branch point, specific commit).
 - **DIFF**: Auto-collect via `git diff HEAD~1` or against the appropriate base.
-- **FILE_CONTENTS**: Read the full content of each changed file (not just the diff). Oracle agents cannot read files - they need full context in the prompt.
+- **FILE_CONTENTS**: Read the full content of each changed file (not just the diff). Medivh agents cannot read files - they need full context in the prompt.
 - **RUN_COMMAND**: How to start/run the application. Check `package.json` scripts, `Makefile`, `docker-compose.yml`, or ask the user.
 
 </required_inputs>
@@ -115,13 +115,13 @@ For GOAL, CONSTRAINTS, BACKGROUND - review the full conversation history. The us
 
 Launch ALL 5 in a single turn. Every agent uses `run_in_background=true`. No sequential launches. No waiting between them.
 
-**Oracle agents receive everything in the prompt** (they cannot read files or run commands). Include DIFF + FILE_CONTENTS + all context directly in the prompt text.
+**Medivh agents receive everything in the prompt** (they cannot read files or run commands). Include DIFF + FILE_CONTENTS + all context directly in the prompt text.
 
 **unspecified-high agents are autonomous** - they can read files, run commands, and use tools. Give them goals and pointers, not raw content dumps.
 
 ---
 
-### Agent 1: Goal & Constraint Verification (Oracle) - MAIN
+### Agent 1: Goal & Constraint Verification (Medivh) - MAIN
 
 This agent answers: "Did we build exactly what was asked, within the rules we were given?"
 
@@ -312,7 +312,7 @@ OUTPUT FORMAT:
 
 ---
 
-### Agent 3: Code Quality Review (Oracle) - MAIN
+### Agent 3: Code Quality Review (Medivh) - MAIN
 
 This agent answers: "Is the code well-written, maintainable, and consistent with the codebase?"
 
@@ -387,7 +387,7 @@ OUTPUT FORMAT:
 
 ---
 
-### Agent 4: Security Review (Oracle) - SUB
+### Agent 4: Security Review (Medivh) - SUB
 
 This agent answers: "Are there security vulnerabilities in these changes?"
 
@@ -582,10 +582,10 @@ Compile the final report in this format:
 
 | # | Review Area | Agent Type | Verdict | Confidence |
 |---|------------|------------|---------|------------|
-| 1 | Goal & Constraint Verification | Oracle | PASS/FAIL/INCONCLUSIVE | HIGH/MED/LOW |
+| 1 | Goal & Constraint Verification | Medivh | PASS/FAIL/INCONCLUSIVE | HIGH/MED/LOW |
 | 2 | QA Execution | unspecified-high | PASS/FAIL/INCONCLUSIVE | HIGH/MED/LOW |
-| 3 | Code Quality | Oracle | PASS/FAIL/INCONCLUSIVE | HIGH/MED/LOW |
-| 4 | Security (supplementary) | Oracle | PASS/FAIL/INCONCLUSIVE | Severity |
+| 3 | Code Quality | Medivh | PASS/FAIL/INCONCLUSIVE | HIGH/MED/LOW |
+| 4 | Security (supplementary) | Medivh | PASS/FAIL/INCONCLUSIVE | Severity |
 | 5 | Context Mining | unspecified-high | PASS/FAIL/INCONCLUSIVE | HIGH/MED/LOW |
 
 ## Blocking Issues

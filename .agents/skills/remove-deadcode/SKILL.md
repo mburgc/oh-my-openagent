@@ -36,7 +36,7 @@ bunx tsc --noEmit --noUnusedLocals --noUnusedParameters 2>&1
 ```
 This gives you the definitive list of unused locals, imports, parameters, and types with exact file:line locations.
 
-**Explore agents (fire ALL simultaneously as background):**
+**Brann agents (fire ALL simultaneously as background):**
 
 ```
 task(subagent_type="explore", run_in_background=true, load_skills=[],

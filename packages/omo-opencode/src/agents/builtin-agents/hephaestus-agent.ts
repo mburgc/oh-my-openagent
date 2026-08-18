@@ -80,7 +80,7 @@ export function maybeCreateHephaestusConfig(input: {
   const { model: hephaestusModel, variant: hephaestusResolvedVariant } = hephaestusResolution
 
   if (!isHephaestusSupportedModel(hephaestusModel)) {
-    log("[agent-registration] Agent skipped: unsupported Hephaestus model", {
+    log("[agent-registration] Agent skipped: unsupported Illidan model", {
       agent: "hephaestus",
       configuredModel: hephaestusModel,
     })
@@ -102,7 +102,7 @@ export function maybeCreateHephaestusConfig(input: {
   if (hepOverrideCategory) {
     hephaestusConfig = applyCategoryOverride(hephaestusConfig, hepOverrideCategory, mergedCategories)
     if (!isHephaestusSupportedModel(hephaestusConfig.model)) {
-      log("[agent-registration] Agent skipped: unsupported Hephaestus category model", {
+      log("[agent-registration] Agent skipped: unsupported Illidan category model", {
         agent: "hephaestus",
         configuredModel: hephaestusConfig.model,
       })
@@ -115,7 +115,7 @@ export function maybeCreateHephaestusConfig(input: {
   if (hephaestusOverride) {
     hephaestusConfig = mergeAgentConfig(hephaestusConfig, hephaestusOverride, directory)
     if (!isHephaestusSupportedModel(hephaestusConfig.model)) {
-      log("[agent-registration] Agent skipped: unsupported Hephaestus override model", {
+      log("[agent-registration] Agent skipped: unsupported Illidan override model", {
         agent: "hephaestus",
         configuredModel: hephaestusConfig.model,
       })

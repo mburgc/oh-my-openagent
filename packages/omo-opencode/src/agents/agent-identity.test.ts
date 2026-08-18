@@ -60,7 +60,7 @@ describe("Sisyphus prompt identity", () => {
         const config = createSisyphusAgent("anthropic/claude-opus-4-7")
 
         expect(config.prompt).toContain("<agent-identity>")
-        expect(config.prompt).toContain("Sisyphus")
+        expect(config.prompt).toContain("Arthas")
         expect(config.prompt).toContain("</agent-identity>")
       })
 
@@ -119,7 +119,7 @@ describe("Agent identity preservation through overrides", () => {
         const merged = mergeAgentConfig(baseConfig, { prompt_append: "Extra instructions here" })
 
         expect(merged.prompt).toContain("<agent-identity>")
-        expect(merged.prompt).toContain("Sisyphus")
+        expect(merged.prompt).toContain("Arthas")
         expect(merged.prompt).toContain("</agent-identity>")
         expect(merged.prompt).toContain("Extra instructions here")
       })
@@ -133,7 +133,7 @@ describe("Agent identity preservation through overrides", () => {
         const merged = mergeAgentConfig(baseConfig, { model: "openai/gpt-5.4" })
 
         expect(merged.prompt).toContain("<agent-identity>")
-        expect(merged.prompt).toContain("Sisyphus")
+        expect(merged.prompt).toContain("Arthas")
         expect(merged.prompt).toContain("</agent-identity>")
       })
     })

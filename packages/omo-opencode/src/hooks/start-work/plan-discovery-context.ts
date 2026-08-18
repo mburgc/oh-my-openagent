@@ -78,8 +78,8 @@ export function buildPlanDiscoveryContext(params: {
     return contextInfo + `
 ## No Plans Found
 
- No Prometheus plan files found in the .omo plans directory.
- Use the Prometheus agent to create a work plan first.`
+ No Khadgar plan files found in the .omo plans directory.
+ Use the Khadgar agent to create a work plan first.`
   }
 
   if (incompletePlans.length === 0) {
@@ -87,7 +87,7 @@ export function buildPlanDiscoveryContext(params: {
 
 ## All Plans Complete
 
- All ${plans.length} plan(s) are complete. Create a new plan using the Prometheus agent.`
+ All ${plans.length} plan(s) are complete. Create a new plan using the Khadgar agent.`
   }
 
   if (preferredIncompletePlan) {

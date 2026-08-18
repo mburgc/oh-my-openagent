@@ -235,7 +235,7 @@ export function createCompactionTodoPreserverHook(
     }
 
     replaceToolArgs(output, { todos: snapshot })
-    log(`[${HOOK_NAME}] Replaced late Atlas bootstrap todowrite with restored snapshot`, {
+    log(`[${HOOK_NAME}] Replaced late Saurfang bootstrap todowrite with restored snapshot`, {
       sessionID: input.sessionID,
       count: snapshot.length,
     })

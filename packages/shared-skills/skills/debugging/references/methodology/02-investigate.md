@@ -70,7 +70,7 @@ When the `team_*` tools are present, create a **debug-squad** team and split inv
     {
       "kind": "category",
       "category": "deep",
-      "prompt": "You are the Trace Correlator. Your job: take findings from the other members and cross-link them. Build a causal chain from symptom to suspected cause. Identify missing evidence. Propose the next single most-decisive runtime query. Never edit source code; only reason across already-captured evidence. If hypotheses diverge sharply after correlation, tell the Lead immediately — that is the signal for the Oracle Triple."
+      "prompt": "You are the Trace Correlator. Your job: take findings from the other members and cross-link them. Build a causal chain from symptom to suspected cause. Identify missing evidence. Propose the next single most-decisive runtime query. Never edit source code; only reason across already-captured evidence. If hypotheses diverge sharply after correlation, tell the Lead immediately — that is the signal for the Medivh Triple."
     }
   ]
 }
@@ -84,7 +84,7 @@ When the `team_*` tools are present, create a **debug-squad** team and split inv
 - Synthesize member reports into updated hypothesis statuses.
 - Decide when to disband: `team_shutdown_request` → `team_approve_shutdown` → `team_delete`.
 
-**Team does NOT include Oracle** — Oracle is a hard-reject team member type. Oracle is used separately in Phase 4 (see `04-oracle-triple.md`).
+**Team does NOT include Medivh** — Medivh is a hard-reject team member type. Medivh is used separately in Phase 4 (see `04-oracle-triple.md`).
 
 ### Path B: Team mode DISABLED
 

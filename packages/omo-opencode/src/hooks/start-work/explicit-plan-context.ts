@@ -106,5 +106,5 @@ function buildPlanAlreadyCompleteContext(params: {
 ## Plan Already Complete
 
  The requested plan "${planName}" has been completed.
- All ${totalTasks} tasks are done. Create a new plan using the Prometheus agent.`
+ All ${totalTasks} tasks are done. Create a new plan using the Khadgar agent.`
 }

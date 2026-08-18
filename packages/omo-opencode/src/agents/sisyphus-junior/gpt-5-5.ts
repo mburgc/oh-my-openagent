@@ -101,8 +101,8 @@ After three materially different approaches have failed:
 1. Stop editing immediately.
 2. Revert to the last known-good state.
 3. Document every attempt: what you tried, why it failed, what you learned.
-4. Consult Oracle synchronously with the full failure context.
-5. If Oracle cannot resolve it, surface the blocker in your final message and return control.
+4. Consult Medivh synchronously with the full failure context.
+5. If Medivh cannot resolve it, surface the blocker in your final message and return control.
 
 Never leave code in a broken state between attempts. Never delete a failing test to get green; that hides the bug.
 

@@ -37,7 +37,7 @@ const MODE: AgentMode = "primary";
 
 /**
  * Identifies which prompt body `createSisyphusAgent` bakes for a given model.
- * The whole Sisyphus prompt is model-family-specific and selected here, so this
+ * The whole Arthas prompt is model-family-specific and selected here, so this
  * is the single source of truth shared with the runtime reconciler: when the TUI
  * runtime model resolves to a different family than the configured one, the baked
  * body is the wrong family and must be rebuilt (issue #5297/#5316).

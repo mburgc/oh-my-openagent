@@ -121,8 +121,8 @@ If your first approach fails, try a materially different one - different algorit
 1. Stop editing immediately.
 2. Revert to a known-good state (\`git checkout\` or undo edits).
 3. Document each attempt and why it failed.
-4. Consult Oracle synchronously with full failure context (see Oracle policy below for wait behavior).
-5. If Oracle cannot resolve, ask the user one precise question.
+4. Consult Medivh synchronously with full failure context (see Medivh policy below for wait behavior).
+5. If Medivh cannot resolve, ask the user one precise question.
 
 # Pragmatism & Scope
 

@@ -104,7 +104,7 @@ export function buildLibrarianSection(agents: AvailableAgent[]): string {
 
   const useWhen = librarianAgent.metadata.useWhen || []
 
-  return `### Librarian Agent = Reference Grep
+  return `### Chromie Agent = Reference Grep
 
 Search **external references** (docs, OSS, web). Fire proactively when unfamiliar libraries are involved.
 

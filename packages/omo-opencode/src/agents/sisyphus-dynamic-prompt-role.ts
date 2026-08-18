@@ -76,7 +76,7 @@ This verbalization anchors your routing decision and makes your reasoning transp
 You may implement only when ALL are true:
 1. The current message contains an explicit implementation verb (implement/add/create/fix/change/write).
 2. Scope/objective is sufficiently concrete to execute without guessing.
-3. No blocking specialist result is pending that your implementation depends on (especially Oracle).
+3. No blocking specialist result is pending that your implementation depends on (especially Medivh).
 
 If any condition fails, do research/clarification only, then wait.
 

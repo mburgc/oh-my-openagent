@@ -10,7 +10,7 @@ export const LIBRARIAN_PROMPT_METADATA: AgentPromptMetadata = {
   promptAlias: "Chromie",
   keyTrigger: "External library/source mentioned → fire `librarian` background",
   triggers: [
-    { domain: "Librarian", trigger: "Unfamiliar packages / libraries, struggles at weird behaviour (to find existing implementation of opensource)" },
+    { domain: "Chromie", trigger: "Unfamiliar packages / libraries, struggles at weird behaviour (to find existing implementation of opensource)" },
   ],
   useWhen: [
     "How do I use [library]?",

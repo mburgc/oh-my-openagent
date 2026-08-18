@@ -28,7 +28,7 @@ export class UnsupportedHephaestusModelError extends Error {
 
   constructor(model: string | undefined) {
     super(
-      `Hephaestus only supports GPT-5.3 Codex, GPT-5.4, GPT-5.5, and GPT-5.6 models; received ${model ?? "no model"}.`,
+      `Illidan only supports GPT-5.3 Codex, GPT-5.4, GPT-5.5, and GPT-5.6 models; received ${model ?? "no model"}.`,
     );
     this.name = "UnsupportedHephaestusModelError";
     this.model = model;

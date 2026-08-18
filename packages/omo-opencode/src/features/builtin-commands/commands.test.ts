@@ -62,7 +62,7 @@ describe("loadBuiltinCommands", () => {
     expect(commands.handoff.template).toContain("$ARGUMENTS")
   })
 
-  test("should default start-work to Atlas for static slash-command discovery", () => {
+  test("should default start-work to Saurfang for static slash-command discovery", () => {
     //#given - no disabled commands
 
     //#when
@@ -72,7 +72,7 @@ describe("loadBuiltinCommands", () => {
     expect(commands["start-work"].agent).toBe("atlas")
   })
 
-  test("should preassign Sisyphus as the native agent for start-work when command config checks registered agents", () => {
+  test("should preassign Arthas as the native agent for start-work when command config checks registered agents", () => {
     //#given - no atlas registration
 
     //#when
@@ -82,7 +82,7 @@ describe("loadBuiltinCommands", () => {
     expect(commands["start-work"].agent).toBe("sisyphus")
   })
 
-  test("should preassign Atlas as the native agent for start-work when Atlas is registered", () => {
+  test("should preassign Saurfang as the native agent for start-work when Saurfang is registered", () => {
     //#given
     registerAgentName("atlas")
 

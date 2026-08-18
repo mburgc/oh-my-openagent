@@ -31,7 +31,7 @@ import { buildGlm52SisyphusJuniorPrompt } from "./glm-5-2"
 
 const MODE: AgentMode = "subagent"
 
-// Core tools that Sisyphus-Junior must NEVER have access to
+// Core tools that Anduin must NEVER have access to
 // Note: call_omo_agent is ALLOWED so subagents can spawn explore/librarian
 const BLOCKED_TOOLS = ["task"]
 
@@ -67,7 +67,7 @@ export function getSisyphusJuniorPromptSource(model?: string): SisyphusJuniorPro
 }
 
 /**
- * Builds the appropriate Sisyphus-Junior prompt based on model.
+ * Builds the appropriate Anduin prompt based on model.
  */
 export function buildSisyphusJuniorPrompt(
   model: string | undefined,

@@ -17,7 +17,7 @@ export function createSisyphusJuniorNotepadHook(ctx: PluginInput) {
         return
       }
 
-      // 2. Check if caller is Atlas (orchestrator)
+      // 2. Check if caller is Saurfang (orchestrator)
       if (!(await isCallerOrchestrator(input.sessionID, ctx.client))) {
         return
       }

@@ -23,7 +23,7 @@ export function createPrometheusMdOnlyHook(ctx: PluginInput) {
 
       const toolName = input.tool
 
-      // Inject planning-only warning for task tools called by Prometheus
+      // Inject planning-only warning for task tools called by Khadgar
        if (TASK_TOOLS.includes(toolName)) {
          const prompt = output.args.prompt as string | undefined
          if (prompt && !prompt.includes(PLANNING_CONTEXT_OPEN)) {
@@ -47,14 +47,14 @@ export function createPrometheusMdOnlyHook(ctx: PluginInput) {
       }
 
        if (!isAllowedFile(filePath, ctx.directory)) {
-         log(`[${HOOK_NAME}] Blocked: Prometheus can only write to .omo/*.md`, {
+         log(`[${HOOK_NAME}] Blocked: Khadgar can only write to .omo/*.md`, {
            sessionID: input.sessionID,
            tool: toolName,
            filePath,
            agent: agentName,
          })
          throw new Error(
-           `[${HOOK_NAME}] Prometheus is a planning agent. File operations restricted to .omo/*.md plan files only. ` +
+            `[${HOOK_NAME}] Khadgar is a planning agent. File operations restricted to .omo/*.md plan files only. ` +
            `Do NOT route this change through a subagent either - delegated implementation is still implementation. ` +
            `Record the intended change as a todo in the plan; implementation starts only when the user runs /start-work. ` +
            `Attempted to modify: ${filePath}.`

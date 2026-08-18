@@ -12,7 +12,7 @@ function buildSisyphusJuniorError(categoryExamples: string): string {
 
   return `Cannot use subagent_type="${SISYPHUS_JUNIOR_AGENT}" directly. ${exampleHint}
 
-Sisyphus-Junior is spawned automatically when you specify a category. Pick the appropriate category for your task domain.`
+Anduin is spawned automatically when you specify a category. Pick the appropriate category for your task domain.`
 }
 
 export function validateSubagentRequest(

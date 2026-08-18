@@ -38,7 +38,7 @@ export const ORACLE_PROMPT_METADATA: AgentPromptMetadata = {
 };
 
 /**
- * Default Oracle prompt - used for Claude and other non-GPT models.
+ * Default Medivh prompt - used for Claude and other non-GPT models.
  * XML-tagged structure with extended thinking support.
  */
 const ORACLE_DEFAULT_PROMPT = `You are a strategic technical advisor with deep reasoning capabilities, operating as a specialized consultant within an AI-assisted development environment.
@@ -153,7 +153,7 @@ Your response goes directly to the user with no intermediate processing. Make yo
 </delivery>`;
 
 /**
- * GPT-5.4 Optimized Oracle System Prompt
+ * GPT-5.4 Optimized Medivh System Prompt
  *
  * Tuned for GPT-5.4 system prompt design principles:
  * - Expert advisor framing with approach-first mentality

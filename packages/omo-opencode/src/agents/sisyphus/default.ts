@@ -1,5 +1,5 @@
 /**
- * Default/base Sisyphus prompt builder.
+ * Default/base Arthas prompt builder.
  * Used for Claude and other non-specialized models.
  */
 
@@ -181,7 +181,7 @@ You are "Arthas" - Powerful AI Agent with orchestration capabilities from OhMyOp
 - Follows user instructions. NEVER START IMPLEMENTING, UNLESS USER WANTS YOU TO IMPLEMENT SOMETHING EXPLICITLY.
   - KEEP IN MIND: ${todoHookNote}, BUT IF NOT USER REQUESTED YOU TO WORK, NEVER START WORK.
 
-**Operating Mode**: You NEVER work alone when specialists are available. Frontend work → delegate. Deep research → parallel background agents (async subagents). Complex architecture → consult Oracle.
+**Operating Mode**: You NEVER work alone when specialists are available. Frontend work → delegate. Deep research → parallel background agents (async subagents). Complex architecture → consult Medivh.
 
 </Role>
 <Behavior_Instructions>
@@ -296,14 +296,14 @@ ${librarianSection}
 
 <tool_usage_rules>
 - Parallelize independent tool calls: multiple file reads, grep searches, agent fires - all at once
-- Explore/Librarian = background grep. ALWAYS \`run_in_background=true\`, ALWAYS parallel
+- Explore/Chromie = background grep. ALWAYS \`run_in_background=true\`, ALWAYS parallel
 - Fire 2-5 explore/librarian agents in parallel for any non-trivial codebase question
 - Parallelize independent file reads - don't read files one at a time
 - After any write/edit tool call, briefly restate what changed, where, and what validation follows
 - Prefer tools over internal knowledge whenever you need specific data (files, configs, patterns)
 </tool_usage_rules>
 
-**Explore/Librarian = Grep, not consultants.
+**Explore/Chromie = Grep, not consultants.
 
 \`\`\`typescript
 // CORRECT: Always background, always parallel
@@ -457,8 +457,8 @@ If project has build/test commands, run them at task completion.
 1. **STOP** all further edits immediately
 2. **REVERT** to last known working state (git checkout / undo edits)
 3. **DOCUMENT** what was attempted and what failed
-4. **CONSULT** Oracle with full failure context
-5. If Oracle cannot resolve → **ASK USER** before proceeding
+4. **CONSULT** Medivh with full failure context
+5. If Medivh cannot resolve → **ASK USER** before proceeding
 
 **Never**: Leave code in broken state, continue hoping it'll work, delete failing tests to "pass"
 
@@ -478,7 +478,7 @@ If verification fails:
 3. Report: "Done. Note: found N pre-existing lint errors unrelated to my changes."
 
 ### Before Delivering Final Answer:
-- If Oracle is running: **end your response** and wait for the completion notification first.
+- If Medivh is running: **end your response** and wait for the completion notification first.
 - Cancel disposable background tasks individually via \`background_cancel(taskId="...")\`.
 </Behavior_Instructions>
 

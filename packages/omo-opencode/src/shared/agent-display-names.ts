@@ -1,7 +1,7 @@
 /**
  * Agent config keys to display names mapping.
  * Config keys are lowercase (e.g., "sisyphus", "atlas").
- * Display names include suffixes for UI/logs (e.g., "Sisyphus - Ultraworker").
+ * Display names include suffixes for UI/logs (e.g., "Arthas - Ultraworker").
  *
  * IMPORTANT: Display names MUST NOT contain parentheses or other characters
  * that are invalid in HTTP header values per RFC 7230. OpenCode passes the
@@ -127,7 +127,7 @@ function resolveKnownAgentConfigKey(agentName: string): string | undefined {
 
 /**
  * Resolve an agent name (display name or config key) to its lowercase config key.
- * "Atlas - Plan Executor" -> "atlas", "Atlas (Plan Executor)" -> "atlas", "atlas" -> "atlas"
+ * "Saurfang - Plan Executor" -> "atlas", "Saurfang (Plan Executor)" -> "atlas", "atlas" -> "atlas"
  */
 export function getAgentConfigKey(agentName: string): string {
   const lower = stripAgentListSortPrefix(agentName).trim().toLowerCase()
