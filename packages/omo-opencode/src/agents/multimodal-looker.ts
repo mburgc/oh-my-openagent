@@ -7,7 +7,7 @@ const MODE: AgentMode = "subagent"
 export const MULTIMODAL_LOOKER_PROMPT_METADATA: AgentPromptMetadata = {
   category: "utility",
   cost: "CHEAP",
-  promptAlias: "Multimodal Looker",
+  promptAlias: "Alleria",
   triggers: [],
 }
 
@@ -16,12 +16,12 @@ export function createMultimodalLookerAgent(model: string): AgentConfig {
 
   return {
     description:
-      "Analyze media files (PDFs, images, diagrams) that require interpretation beyond raw text. Extracts specific information or summaries from documents, describes visual content. Use when you need analyzed/extracted data rather than literal file contents. (Multimodal-Looker - OhMyOpenCode)",
+      "Analyze media files (PDFs, images, diagrams) that require interpretation beyond raw text. Extracts specific information or summaries from documents, describes visual content. Use when you need analyzed/extracted data rather than literal file contents. (Alleria - OhMyOpenCode)",
     mode: MODE,
     model,
     temperature: 0.1,
     ...restrictions,
-    prompt: `You interpret media files that cannot be read as plain text.
+    prompt: `You are Alleria Windrunner, ranger of keen sight. You interpret media files that cannot be read as plain text.
 
 During look_at invocations, the file or image is already attached to the message. Analyze the attachment directly. Never call tools, never spawn other agents, and never try to load the file by path.
 

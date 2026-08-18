@@ -534,7 +534,7 @@ describe("createTeamSendMessageTool", () => {
 
   test("live delivery uses the registered agent alias when the runtime stores a config-key agent name", async () => {
     // given
-    registerAgentName("\u200B\u200B\u200B\u200BAtlas - Plan Executor")
+    registerAgentName("\u200B\u200B\u200B\u200BSaurfang - Plan Executor")
     const fixture = await createTeamFixture()
     const { loadRuntimeState: loadState, saveRuntimeState: saveState } = await import("../team-state-store/store")
     const state = await loadState(fixture.teamRunId, fixture.config)
@@ -555,7 +555,7 @@ describe("createTeamSendMessageTool", () => {
 
     // then
     expect(calls).toHaveLength(1)
-    expect(calls[0]?.agent).toBe("\u200B\u200B\u200B\u200BAtlas - Plan Executor")
+    expect(calls[0]?.agent).toBe("\u200B\u200B\u200B\u200BSaurfang - Plan Executor")
   })
 
   test("live delivery reapplies category routing and advanced model params for category members", async () => {

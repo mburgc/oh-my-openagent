@@ -88,7 +88,7 @@ describe("team lifecycle tools", () => {
     const teamCreateTool = createTeamCreateToolForTest()
     const toolContext = {
       ...createToolContext("lead-session"),
-      agent: "00|Sisyphus",
+      agent: "00|Arthas - ultraworker",
     }
 
     // when

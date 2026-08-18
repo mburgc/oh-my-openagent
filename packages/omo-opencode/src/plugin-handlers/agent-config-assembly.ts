@@ -183,6 +183,7 @@ async function assembleSisyphusEnabledConfig(params: AssembleAgentConfigParams):
   const protectedBuiltinAgentNames = createProtectedAgentNameSet([
     ...Object.keys(agentConfig),
     ...Object.keys(params.builtinAgents),
+    ...Object.keys(params.builtinAgents).map((key) => getAgentDisplayName(key)),
   ]);
   const filteredSources = filterCustomAgentSources(params.sources, protectedBuiltinAgentNames);
   const filteredConfigAgents = configAgent
@@ -215,7 +216,10 @@ async function assembleSisyphusEnabledConfig(params: AssembleAgentConfigParams):
 }
 
 function assembleSisyphusDisabledConfig(params: AssembleAgentConfigParams): void {
-  const protectedBuiltinAgentNames = createProtectedAgentNameSet(Object.keys(params.builtinAgents));
+  const protectedBuiltinAgentNames = createProtectedAgentNameSet([
+    ...Object.keys(params.builtinAgents),
+    ...Object.keys(params.builtinAgents).map((key) => getAgentDisplayName(key)),
+  ]);
   const filteredSources = filterCustomAgentSources(params.sources, protectedBuiltinAgentNames);
   const filteredConfigAgents = params.sources.configAgent
     ? defaultSubagentMode(

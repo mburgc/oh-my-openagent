@@ -295,13 +295,13 @@ describe("createPluginInterface - backward compatibility", () => {
     await pluginInterface["chat.message"]?.(
       {
         sessionID: "ses-legacy-zwsp",
-        agent: "\u200B\u200BHephaestus - Deep Agent",
+        agent: "\u200B\u200BIllidan - Deep Agent",
       } as never,
       output as never,
     )
 
     // then
-    expect(getSessionAgent("ses-legacy-zwsp")).toBe("Hephaestus - Deep Agent")
+    expect(getSessionAgent("ses-legacy-zwsp")).toBe("Illidan - Deep Agent")
   })
 })
 

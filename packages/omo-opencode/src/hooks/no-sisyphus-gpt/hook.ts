@@ -8,11 +8,11 @@ import {
 import { AGENT_MODEL_REQUIREMENTS, log } from "../../shared"
 import { getAgentConfigKey } from "../../shared/agent-display-names"
 
-const TOAST_TITLE = "NEVER Use Sisyphus with GPT"
+const TOAST_TITLE = "NEVER Use Arthas with GPT"
 const TOAST_MESSAGE = [
-  "Sisyphus works best with Claude Opus, and works fine with Kimi/GLM models.",
-  "Do NOT use Sisyphus with GPT (except GPT-5.4 and GPT-5.5 which have specialized support).",
-  "For other GPT models, always use Hephaestus.",
+  "Arthas works best with Claude Opus, and works fine with Kimi/GLM models.",
+  "Do NOT use Arthas with GPT (except GPT-5.4 and GPT-5.5 which have specialized support).",
+  "For other GPT models, always use Illidan.",
 ].join("\n")
 function showToast(ctx: PluginInput, sessionID: string): void {
   ctx.client.tui.showToast({

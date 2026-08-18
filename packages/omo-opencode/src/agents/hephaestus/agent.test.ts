@@ -281,7 +281,7 @@ describe("createHephaestusAgent", () => {
     const config = createHephaestusAgent(model);
 
     // then
-    expect(config.prompt).toContain("Hephaestus");
+    expect(config.prompt).toContain("Illidan");
     expect(config.prompt).toContain("autonomous deep worker");
   });
 

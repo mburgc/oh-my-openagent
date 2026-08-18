@@ -8,11 +8,11 @@ import {
 import { log } from "../../shared"
 import { getAgentConfigKey } from "../../shared/agent-display-names"
 
-const TOAST_TITLE = "NEVER Use Hephaestus with Non-GPT"
+const TOAST_TITLE = "NEVER Use Illidan with Non-GPT"
 const TOAST_MESSAGE = [
-  "Hephaestus is designed exclusively for GPT models.",
-  "Hephaestus is trash without GPT.",
-  "For Claude/Kimi/GLM models, always use Sisyphus.",
+  "Illidan is designed exclusively for GPT models.",
+  "Illidan is trash without GPT.",
+  "For Claude/Kimi/GLM models, always use Arthas.",
 ].join("\n")
 type NoHephaestusNonGptHookOptions = {
   allowNonGptModel?: boolean

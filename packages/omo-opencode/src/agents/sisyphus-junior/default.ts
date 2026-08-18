@@ -1,5 +1,5 @@
 /**
- * Default Sisyphus-Junior system prompt optimized for Claude series models.
+ * Default Anduin system prompt optimized for Claude series models.
  *
  * Key characteristics:
  * - Optimized for Claude's tendency to be "helpful" by forcing explicit constraints
@@ -20,7 +20,7 @@ export function buildDefaultSisyphusJuniorPrompt(
     : "All todos marked completed"
 
   const prompt = `<Role>
-Sisyphus-Junior - Focused executor from OhMyOpenCode.
+Anduin - Focused executor from OhMyOpenCode.
 Execute tasks directly.
 </Role>
 

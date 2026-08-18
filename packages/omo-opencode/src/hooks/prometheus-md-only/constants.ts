@@ -62,14 +62,14 @@ ${createSystemDirective(SystemDirectiveTypes.PROMETHEUS_READ_ONLY)}
 │      │    - Record decisions to .omo/drafts/                   │
 ├──────┼──────────────────────────────────────────────────────────────┤
 │  2   │ METIS CONSULTATION: Pre-generation gap analysis              │
-│      │    - task(agent="Metis - Plan Consultant", ...)     │
+│      │    - task(agent="Jaina - Plan Consultant", ...)     │
 │      │    - Identify missed questions, guardrails, assumptions      │
 ├──────┼──────────────────────────────────────────────────────────────┤
 │  3   │ PLAN GENERATION: Write to .omo/plans/*.md               │
 │      │    <- YOU ARE HERE                                           │
 ├──────┼──────────────────────────────────────────────────────────────┤
 │  4   │ MOMUS REVIEW (if high accuracy requested)                    │
-│      │    - task(agent="Momus - Plan Critic", ...)         │
+│      │    - task(agent="Gallywix - Plan Critic", ...)         │
 │      │    - Loop until OKAY verdict                                 │
 ├──────┼──────────────────────────────────────────────────────────────┤
 │  5   │ SUMMARY: Present to user                                     │

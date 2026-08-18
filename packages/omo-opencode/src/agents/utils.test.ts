@@ -1426,7 +1426,7 @@ describe("createBuiltinAgents with skill overrides", () => {
 
       // #then
       expect(agents.librarian.prompt).toContain("router, not a rulebook")
-      expect(agents.librarian.prompt).toContain("THE LIBRARIAN")
+      expect(agents.librarian.prompt).toContain("CHROMIE")
       expect("skills" in agents.librarian).toBe(false)
     } finally {
       fetchSpy.mockRestore()

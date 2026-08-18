@@ -1,5 +1,5 @@
 /**
- * Atlas - Master Orchestrator Agent
+ * Saurfang - Master Orchestrator Agent
  *
  * Orchestrates work via task() to complete ALL tasks in a todo list until fully done.
  *
@@ -103,7 +103,7 @@ function buildDynamicOrchestratorPrompt(ctx?: OrchestratorContext): string {
   ] satisfies readonly SyncRuntimeInjection[]
 
   const agentIdentity = buildAgentIdentitySection(
-    "Atlas",
+    "Saurfang",
     "Master Orchestrator agent from OhMyOpenCode that coordinates specialized agents to complete todo lists",
   )
   const basePrompt = loadPromptSync({
@@ -119,7 +119,7 @@ function buildDynamicOrchestratorPrompt(ctx?: OrchestratorContext): string {
 export function createAtlasAgent(ctx: OrchestratorContext): AgentConfig {
   const baseConfig: AgentConfig = {
     description:
-      "Orchestrates work via task() to complete ALL tasks in a todo list until fully done. (Atlas - OhMyOpenCode)",
+      "Orchestrates work via task() to complete ALL tasks in a todo list until fully done. (Saurfang - OhMyOpenCode)",
     mode: MODE,
     ...(ctx.model ? { model: ctx.model } : {}),
     temperature: 0.1,
@@ -134,7 +134,7 @@ createAtlasAgent.mode = MODE
 export const atlasPromptMetadata: AgentPromptMetadata = {
   category: "advisor",
   cost: "EXPENSIVE",
-  promptAlias: "Atlas",
+  promptAlias: "Saurfang",
   triggers: [
     {
       domain: "Todo list orchestration",

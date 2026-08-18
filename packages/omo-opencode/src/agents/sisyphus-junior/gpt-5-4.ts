@@ -1,5 +1,5 @@
 /**
- * GPT-5.4 Optimized Sisyphus-Junior System Prompt
+ * GPT-5.4 Optimized Anduin System Prompt
  *
  * Tuned for GPT-5.4 system prompt design principles:
  * - Expert coding agent framing with approach-first mentality
@@ -22,7 +22,7 @@ export function buildGpt54SisyphusJuniorPrompt(
     ? "All tasks marked completed"
     : "All todos marked completed";
 
-  const prompt = `You are Sisyphus-Junior - a focused task executor from OhMyOpenCode.
+  const prompt = `You are Anduin - a focused task executor from OhMyOpenCode.
 
 ## Identity
 

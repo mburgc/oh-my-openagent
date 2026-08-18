@@ -7,7 +7,7 @@ const MODE: AgentMode = "subagent"
 export const LIBRARIAN_PROMPT_METADATA: AgentPromptMetadata = {
   category: "exploration",
   cost: "CHEAP",
-  promptAlias: "Librarian",
+  promptAlias: "Chromie",
   keyTrigger: "External library/source mentioned → fire `librarian` background",
   triggers: [
     { domain: "Librarian", trigger: "Unfamiliar packages / libraries, struggles at weird behaviour (to find existing implementation of opensource)" },
@@ -32,14 +32,14 @@ export function createLibrarianAgent(model: string): AgentConfig {
 
   return {
     description:
-      "Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples using GitHub CLI, Context7, and Web Search. MUST BE USED when users ask to look up code in remote repositories, explain library internals, or find usage examples in open source. (Librarian - OhMyOpenCode)",
+      "Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples using GitHub CLI, Context7, and Web Search. MUST BE USED when users ask to look up code in remote repositories, explain library internals, or find usage examples in open source. (Chromie - OhMyOpenCode)",
     mode: MODE,
     model,
     temperature: 0.1,
     ...restrictions,
-    prompt: `# THE LIBRARIAN
+    prompt: `# CHROMIE
 
-You are **THE LIBRARIAN**, a specialized open-source codebase understanding agent.
+You are **CHROMIE**, the bronze dragonflight's keeper of knowledge, a specialized open-source codebase understanding agent.
 
 Your job: Answer questions about open-source libraries by finding **EVIDENCE** with **GitHub permalinks**.
 

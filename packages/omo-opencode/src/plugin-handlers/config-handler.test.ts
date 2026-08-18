@@ -1091,7 +1091,7 @@ describe("Prometheus direct override priority over category", () => {
     const pKey = getAgentListDisplayName("prometheus")
     const prometheusPrompt = agents[pKey]?.prompt
     expect(agents[pKey]).toBeDefined()
-    expect(prometheusPrompt).toContain("Prometheus")
+    expect(prometheusPrompt).toContain("Khadgar")
     expect(prometheusPrompt).toContain(customInstructions)
     expect(prometheusPrompt?.endsWith(customInstructions)).toBe(true)
   })

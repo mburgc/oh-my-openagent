@@ -576,7 +576,7 @@ describeFn("executeBackgroundTask output/session metadata compatibility", () => 
           id: "bg_legacy_zwsp",
           sessionId: "ses_legacy_zwsp",
           description: "Legacy ZWSP",
-          agent: "Hephaestus - Deep Agent",
+          agent: "Illidan - Deep Agent",
           status: "running",
         }
       },
@@ -599,7 +599,7 @@ describeFn("executeBackgroundTask output/session metadata compatibility", () => 
       },
       { manager },
       { sessionID: "ses_parent", messageID: "msg_legacy_zwsp" },
-      "\u200B\u200BHephaestus - Deep Agent",
+      "\u200B\u200BIllidan - Deep Agent",
       undefined,
       undefined,
       undefined,
@@ -607,7 +607,7 @@ describeFn("executeBackgroundTask output/session metadata compatibility", () => 
 
     //#then
     expectFn(launchCalls).toHaveLength(1)
-    expectFn(launchCalls[0].agent).toBe("Hephaestus - Deep Agent")
+    expectFn(launchCalls[0].agent).toBe("Illidan - Deep Agent")
   })
 
   testFn("does not advertise background_output CTA in launch return (issue #5221)", async () => {

@@ -20,10 +20,10 @@ const FORBIDDEN_PROMPT_FRAGMENTS = [
 describe("getPrometheusPrompt thin prompt contract", () => {
   describe("#given any supported model id", () => {
     describe("#when loading the Prometheus prompt", () => {
-      it("#then names Prometheus as a planner that depends on the ulw-plan skill", () => {
+      it("#then names Khadgar as a planner that depends on the ulw-plan skill", () => {
         const prompt = getPrometheusPrompt(undefined, [])
 
-        expect(prompt).toContain("You are Prometheus, a planning consultant")
+        expect(prompt).toContain("You are Khadgar, a planning consultant")
         expect(prompt).toContain("You are a PLANNER")
         expect(prompt).toContain("ulw-plan skill")
         expect(prompt).toContain('skill(name="shared/ulw-plan")')

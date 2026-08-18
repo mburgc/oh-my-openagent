@@ -14,7 +14,7 @@ mock.module("../../plugin-config", () => ({
   loadPluginConfig: mock(() => testPluginConfig),
 }))
 mock.module("./agent-resolver", () => ({
-  resolveRunAgent: mock(() => "Sisyphus - Ultraworker"),
+  resolveRunAgent: mock(() => "Arthas - Ultraworker"),
 }))
 mock.module("./server-connection", () => ({
   createServerConnection: mock(async () => ({

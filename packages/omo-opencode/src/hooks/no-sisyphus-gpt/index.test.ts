@@ -56,8 +56,8 @@ describe("no-sisyphus-gpt hook", () => {
     const firstToastCall = (showToast.mock.calls as Array<Array<unknown>>)[0]?.[0]
     expect(firstToastCall).toMatchObject({
       body: {
-        title: "NEVER Use Sisyphus with GPT",
-        message: expect.stringContaining("For other GPT models, always use Hephaestus."),
+        title: "NEVER Use Arthas with GPT",
+        message: expect.stringContaining("For other GPT models, always use Illidan."),
         variant: "error",
       },
     })

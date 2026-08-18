@@ -82,7 +82,7 @@ describe("Sisyphus prompt identity", () => {
         const config = createSisyphusAgent("openai/gpt-5.4")
 
         expect(config.prompt).toContain("<agent-identity>")
-        expect(config.prompt).toContain("Sisyphus")
+        expect(config.prompt).toContain("Arthas")
         expect(config.prompt).toContain("</agent-identity>")
       })
     })
@@ -96,7 +96,7 @@ describe("Hephaestus prompt identity", () => {
         const config = createHephaestusAgent("openai/gpt-5.4")
 
         expect(config.prompt).toContain("<agent-identity>")
-        expect(config.prompt).toContain("Hephaestus")
+        expect(config.prompt).toContain("Illidan")
         expect(config.prompt).toContain("</agent-identity>")
       })
 

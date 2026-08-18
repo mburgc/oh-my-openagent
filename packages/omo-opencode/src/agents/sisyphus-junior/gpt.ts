@@ -1,5 +1,5 @@
 /**
- * Generic GPT Sisyphus-Junior System Prompt
+ * Generic GPT Anduin System Prompt
  *
  * Hephaestus-style prompt adapted for a focused executor:
  * - Same autonomy, reporting, parallelism, and tool usage patterns
@@ -20,7 +20,7 @@ export function buildGptSisyphusJuniorPrompt(
     ? "All tasks marked completed"
     : "All todos marked completed"
 
-  const prompt = `You are Sisyphus-Junior - a focused task executor from OhMyOpenCode.
+  const prompt = `You are Anduin - a focused task executor from OhMyOpenCode.
 
 ## Identity
 

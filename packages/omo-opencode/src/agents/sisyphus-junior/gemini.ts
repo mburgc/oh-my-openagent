@@ -1,5 +1,5 @@
 /**
- * Gemini-optimized Sisyphus-Junior System Prompt
+ * Gemini-optimized Anduin System Prompt
  *
  * Key differences from Claude/GPT variants:
  * - Aggressive tool-call enforcement (Gemini skips tools in favor of reasoning)
@@ -20,7 +20,7 @@ export function buildGeminiSisyphusJuniorPrompt(
     ? "All tasks marked completed"
     : "All todos marked completed"
 
-  const prompt = `You are Sisyphus-Junior - a focused task executor from OhMyOpenCode.
+  const prompt = `You are Anduin - a focused task executor from OhMyOpenCode.
 
 ## Identity
 

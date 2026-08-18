@@ -45,8 +45,8 @@ describe("no-hephaestus-non-gpt hook", () => {
     expect(output2.message.agent).toBe("sisyphus")
     expect(showToast.mock.calls[0]?.[0]).toMatchObject({
       body: {
-        title: "NEVER Use Hephaestus with Non-GPT",
-        message: expect.stringContaining("Hephaestus is trash without GPT."),
+        title: "NEVER Use Illidan with Non-GPT",
+        message: expect.stringContaining("Illidan is trash without GPT."),
         variant: "error",
       },
     })
@@ -75,7 +75,7 @@ describe("no-hephaestus-non-gpt hook", () => {
     expect(output.message.agent).toBeUndefined()
     expect(showToast.mock.calls[0]?.[0]).toMatchObject({
       body: {
-        title: "NEVER Use Hephaestus with Non-GPT",
+        title: "NEVER Use Illidan with Non-GPT",
         variant: "warning",
       },
     })

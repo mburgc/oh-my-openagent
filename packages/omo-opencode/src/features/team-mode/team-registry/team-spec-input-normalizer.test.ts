@@ -15,7 +15,7 @@ describe("normalizeTeamSpecInput", () => {
 
     // when
     const normalizedSpec = normalizeTeamSpecInput(rawSpec, {
-      callerTeamLead: resolveCallerTeamLead("\u200BSisyphus - Ultraworker"),
+      callerTeamLead: resolveCallerTeamLead("\u200BArthas - Ultraworker"),
     })
 
     // then
@@ -41,7 +41,7 @@ describe("normalizeTeamSpecInput", () => {
 
     // when
     const normalizedSpec = normalizeTeamSpecInput(rawSpec, {
-      callerTeamLead: resolveCallerTeamLead("Sisyphus - Ultraworker"),
+      callerTeamLead: resolveCallerTeamLead("Arthas - Ultraworker"),
     })
 
     // then
@@ -60,7 +60,7 @@ describe("normalizeTeamSpecInput", () => {
 
     // when
     const normalizedSpec = normalizeTeamSpecInput(rawSpec, {
-      callerTeamLead: resolveCallerTeamLead("Sisyphus - Ultraworker"),
+      callerTeamLead: resolveCallerTeamLead("Arthas - Ultraworker"),
     })
 
     // then
@@ -122,7 +122,7 @@ describe("normalizeTeamSpecInput", () => {
 
     // when
     const normalizedSpec = normalizeTeamSpecInput(rawSpec, {
-      callerTeamLead: resolveCallerTeamLead("Sisyphus - Ultraworker"),
+      callerTeamLead: resolveCallerTeamLead("Arthas - Ultraworker"),
     })
 
     // then
@@ -148,7 +148,7 @@ describe("normalizeTeamSpecInput", () => {
 
     // when
     const normalizedSpec = normalizeTeamSpecInput(rawSpec, {
-      callerTeamLead: resolveCallerTeamLead("Sisyphus - Ultraworker"),
+      callerTeamLead: resolveCallerTeamLead("Arthas - Ultraworker"),
       defaultCategoryName: "analysis",
     })
 
@@ -173,7 +173,7 @@ describe("normalizeTeamSpecInput", () => {
 
     // when
     const normalizedSpec = normalizeTeamSpecInput(rawSpec, {
-      callerTeamLead: resolveCallerTeamLead("Sisyphus - Ultraworker"),
+      callerTeamLead: resolveCallerTeamLead("Arthas - Ultraworker"),
     })
 
     // then

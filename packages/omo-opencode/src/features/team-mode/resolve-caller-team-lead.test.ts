@@ -37,7 +37,7 @@ describe("resolveCallerTeamLead", () => {
 
   test("returns an eligible sisyphus lead for the suffixed display name", () => {
     // given
-    const rawAgentName = "Sisyphus - Ultraworker"
+    const rawAgentName = "Arthas - Ultraworker"
 
     // when
     const result = resolveCallerTeamLead(rawAgentName)
@@ -45,14 +45,14 @@ describe("resolveCallerTeamLead", () => {
     // then
     expect(result).toEqual({
       agentTypeId: "sisyphus",
-      displayName: "Sisyphus - ultraworker",
+      displayName: "Arthas - ultraworker",
       isEligibleForTeamLead: true,
     })
   })
 
   test("strips visible ordering prefixes before resolving the caller lead", () => {
     // given
-    const rawAgentName = "00|Sisyphus"
+    const rawAgentName = "00|Arthas - ultraworker"
 
     // when
     const result = resolveCallerTeamLead(rawAgentName)
@@ -60,7 +60,7 @@ describe("resolveCallerTeamLead", () => {
     // then
     expect(result).toEqual({
       agentTypeId: "sisyphus",
-      displayName: "Sisyphus",
+      displayName: "Arthas - ultraworker",
       isEligibleForTeamLead: true,
     })
   })

@@ -184,7 +184,7 @@ describe("resolveSubagentExecution", () => {
     })
     const args = createBaseArgs({ subagent_type: "sisyphus" })
     const executorCtx = createExecutorContext(async () => ([
-      { name: "Sisyphus - ultraworker", mode: "primary", model: "anthropic/claude-opus-4-7" },
+      { name: "Arthas - ultraworker", mode: "primary", model: "anthropic/claude-opus-4-7" },
       { name: "oracle", mode: "subagent" },
     ]))
 
@@ -195,7 +195,7 @@ describe("resolveSubagentExecution", () => {
 
     //#then
     expect(result.error).toBeUndefined()
-    expect(result.agentToUse).toBe("Sisyphus - ultraworker")
+    expect(result.agentToUse).toBe("Arthas - ultraworker")
   })
 
   test("allows delegating to Sisyphus-Junior when allowSisyphusJuniorDirect is enabled (team-mode path)", async () => {
@@ -251,7 +251,7 @@ describe("resolveSubagentExecution", () => {
     //#then
     expect(result.agentToUse).toBe("")
     expect(result.error).toBeDefined()
-    expect(result.error).toContain('Cannot use subagent_type="Sisyphus-Junior" directly')
+    expect(result.error).toContain('Cannot use subagent_type="Anduin" directly')
   })
 
   test("requires explicit all or subagent mode for task-callable agents", async () => {
@@ -698,9 +698,9 @@ describe("resolveSubagentExecution", () => {
 
   test("matches agents even when zero-width characters are present in the requested name", async () => {
     //#given
-    const args = createBaseArgs({ subagent_type: "\uFEFFSisyphus - Ultraworker" })
+    const args = createBaseArgs({ subagent_type: "\uFEFFArthas - Ultraworker" })
     const executorCtx = createExecutorContext(async () => ([
-      { name: "\u200BSisyphus - ultraworker", mode: "subagent", model: "openai/gpt-5.5" },
+      { name: "\u200BArthas - ultraworker", mode: "subagent", model: "openai/gpt-5.5" },
     ]))
 
     //#when
@@ -708,7 +708,7 @@ describe("resolveSubagentExecution", () => {
 
     //#then
     expect(result.error).toBeUndefined()
-    expect(result.agentToUse).toBe("Sisyphus - ultraworker")
+    expect(result.agentToUse).toBe("Arthas - ultraworker")
   })
 
   test("uses agent override fallback_models for subagent runtime fallback chain", async () => {
@@ -1384,7 +1384,7 @@ describe("resolveSubagentExecution - agent name sanitization", () => {
     })
     const args = createBaseArgs({ subagent_type: "\\hephaestus\\" })
     const executorCtx = createExecutorContext(async () => ([
-      { name: "Hephaestus - Deep Agent", mode: "subagent", model: "openai/gpt-5.5" },
+      { name: "Illidan - Deep Agent", mode: "subagent", model: "openai/gpt-5.5" },
     ]))
 
     //#when
@@ -1392,7 +1392,7 @@ describe("resolveSubagentExecution - agent name sanitization", () => {
 
     //#then
     expect(result.error).toBeUndefined()
-    expect(result.agentToUse).toBe("Hephaestus - Deep Agent")
+    expect(result.agentToUse).toBe("Illidan - Deep Agent")
   })
 
   test("strips double-quoted agent names", async () => {
@@ -1442,9 +1442,9 @@ describe("resolveSubagentExecution - agent name sanitization", () => {
       connected: [],
       updatedAt: "2026-03-03T00:00:00.000Z",
     })
-    const args = createBaseArgs({ subagent_type: "Sisyphus - Ultraworker" })
+    const args = createBaseArgs({ subagent_type: "Arthas - Ultraworker" })
     const executorCtx = createExecutorContext(async () => ([
-      { name: "\u200BSisyphus - ultraworker", mode: "subagent", model: "openai/gpt-5.5" },
+      { name: "\u200BArthas - ultraworker", mode: "subagent", model: "openai/gpt-5.5" },
     ]))
 
     //#when
@@ -1452,7 +1452,7 @@ describe("resolveSubagentExecution - agent name sanitization", () => {
 
     //#then
     expect(result.error).toBeUndefined()
-    expect(result.agentToUse).toBe("Sisyphus - ultraworker")
+    expect(result.agentToUse).toBe("Arthas - ultraworker")
   })
 
   test("strips legacy ZWSP-prefixed agent names from persisted subagent runtime state (GH-3259)", async () => {
@@ -1462,9 +1462,9 @@ describe("resolveSubagentExecution - agent name sanitization", () => {
       connected: [],
       updatedAt: "2026-03-03T00:00:00.000Z",
     })
-    const args = createBaseArgs({ subagent_type: "Hephaestus - Deep Agent" })
+    const args = createBaseArgs({ subagent_type: "Illidan - Deep Agent" })
     const executorCtx = createExecutorContext(async () => ([
-      { name: "\u200B\u200BHephaestus - Deep Agent", mode: "subagent", model: "openai/gpt-5.5" },
+      { name: "\u200B\u200BIllidan - Deep Agent", mode: "subagent", model: "openai/gpt-5.5" },
     ]))
 
     //#when
@@ -1472,6 +1472,6 @@ describe("resolveSubagentExecution - agent name sanitization", () => {
 
     //#then
     expect(result.error).toBeUndefined()
-    expect(result.agentToUse).toBe("Hephaestus - Deep Agent")
+    expect(result.agentToUse).toBe("Illidan - Deep Agent")
   })
 })

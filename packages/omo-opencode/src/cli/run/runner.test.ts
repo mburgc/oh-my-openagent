@@ -81,7 +81,7 @@ describe("resolveRunAgent", () => {
 
   it("maps display-name style default_run_agent values to canonical prompt agent ids", () => {
     // given
-    const config = createConfig({ default_run_agent: "Sisyphus - Ultraworker" })
+    const config = createConfig({ default_run_agent: "Arthas - Ultraworker" })
 
     // when
     const agent = resolveRunAgent({ message: "test" }, config, {})

@@ -24,7 +24,7 @@ const PROMPT_SIGNATURES = [
   {
     path: "packages/prompts-core/prompts/atlas/default.md",
     label: "Atlas default",
-    signature: "You are Atlas - the Master Orchestrator from OhMyOpenCode.",
+    signature: "You are Saurfang - the Master Orchestrator from OhMyOpenCode.",
   },
   {
     path: "packages/prompts-core/prompts/atlas/gemini.md",

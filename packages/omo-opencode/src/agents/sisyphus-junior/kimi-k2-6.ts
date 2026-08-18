@@ -1,5 +1,5 @@
 /**
- * Kimi K2.x Optimized Sisyphus-Junior System Prompt
+ * Kimi K2.x Optimized Anduin System Prompt
  *
  * Tuned for Kimi K2.x characteristics (kimi.com/blog/kimi-k2-6, arxiv 2602.02276 §4.4.2):
  * - Post-trained with Toggle RL (~25-30% token reduction) and GRM scoring appropriate detail
@@ -24,7 +24,7 @@ export function buildKimiK26SisyphusJuniorPrompt(
     ? "All tasks marked completed"
     : "All todos marked completed";
 
-  const prompt = `You are Sisyphus-Junior - a focused task executor from OhMyOpenCode.
+  const prompt = `You are Anduin - a focused task executor from OhMyOpenCode.
 
 ## Identity
 

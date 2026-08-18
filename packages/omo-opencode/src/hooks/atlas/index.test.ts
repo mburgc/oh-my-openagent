@@ -2188,10 +2188,10 @@ session_id: ses_untrusted_999
         started_at: "2026-01-02T10:00:00Z",
         session_ids: [MAIN_SESSION_ID],
         plan_name: "test-plan",
-        agent: "Atlas - Plan Executor",
+        agent: "Saurfang - Plan Executor",
       }
       writeBoulderState(TEST_DIR, state)
-      registerAgentName("Atlas - Plan Executor")
+      registerAgentName("Saurfang - Plan Executor")
 
       const mockInput = createMockPluginInput()
       const hook = createTestAtlasHook(mockInput)
@@ -2207,7 +2207,7 @@ session_id: ses_untrusted_999
       // then
       expect(mockInput._promptMock).toHaveBeenCalled()
       const callArgs = mockInput._promptMock.mock.calls[0][0]
-      expect(callArgs.body.agent).toBe("Atlas - Plan Executor")
+      expect(callArgs.body.agent).toBe("Saurfang - Plan Executor")
       expect(callArgs.body.agent).not.toBe("atlas")
     })
 
@@ -2221,10 +2221,10 @@ session_id: ses_untrusted_999
         started_at: "2026-01-02T10:00:00Z",
         session_ids: [MAIN_SESSION_ID],
         plan_name: "test-plan",
-        agent: "\u200B\u200BAtlas - Plan Executor",
+        agent: "\u200B\u200BSaurfang - Plan Executor",
       }
       writeBoulderState(TEST_DIR, state)
-      registerAgentName("\u200B\u200BAtlas - Plan Executor")
+      registerAgentName("\u200B\u200BSaurfang - Plan Executor")
 
       const mockInput = createMockPluginInput()
       const hook = createTestAtlasHook(mockInput)
@@ -2240,7 +2240,7 @@ session_id: ses_untrusted_999
       // then
       expect(mockInput._promptMock).toHaveBeenCalled()
       const callArgs = mockInput._promptMock.mock.calls[0][0]
-      expect(callArgs.body.agent).toBe("Atlas - Plan Executor")
+      expect(callArgs.body.agent).toBe("Saurfang - Plan Executor")
       expect(callArgs.body.agent).not.toContain("\u200B")
     })
 

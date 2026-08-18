@@ -164,7 +164,7 @@ describe("ralph-loop continuation prompt injector", () => {
       client: {
         session: {
           messages: async () => ({
-            data: [{ info: { agent: "\u200bSisyphus - Ultraworker" } }],
+            data: [{ info: { agent: "\u200bArthas - Ultraworker" } }],
           }),
           promptAsync: async (input: {
             body: {
@@ -194,7 +194,7 @@ describe("ralph-loop continuation prompt injector", () => {
     })
 
     // then
-    expect(promptBody?.agent).toBe("Sisyphus - Ultraworker")
+    expect(promptBody?.agent).toBe("Arthas - Ultraworker")
     expect(promptBody?.agent).not.toContain("\u200b")
     expect(promptBody?.noReply).toBeUndefined()
     expect(promptPart?.synthetic).toBe(true)
@@ -208,7 +208,7 @@ describe("ralph-loop continuation prompt injector", () => {
       client: {
         session: {
           messages: async () => ({
-            data: [{ info: { agent: "Sisyphus - Ultraworker" } }],
+            data: [{ info: { agent: "Arthas - Ultraworker" } }],
           }),
           promptAsync: async (input: { body: { agent?: string } }) => {
             promptBody = input.body
@@ -227,7 +227,7 @@ describe("ralph-loop continuation prompt injector", () => {
     })
 
     // then
-    expect(promptBody?.agent).toBe("Sisyphus - Ultraworker")
+    expect(promptBody?.agent).toBe("Arthas - Ultraworker")
   })
 
   test("#given inherited message model includes variant #when injecting continuation prompt #then promptAsync receives variant as a top-level field", async () => {

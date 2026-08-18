@@ -1,5 +1,5 @@
 /**
- * Sisyphus-Junior - Focused Task Executor
+ * Anduin - Focused Task Executor
  *
  * Executes delegated tasks directly without spawning other agents.
  * Category-spawned executor with domain-specific configurations.
@@ -133,7 +133,7 @@ export function createSisyphusJuniorAgentWithOverrides(
 
   const base: AgentConfig = {
     description: override?.description ??
-      "Focused task executor. Same discipline, no delegation. (Sisyphus-Junior - OhMyOpenCode)",
+      "Focused task executor. Same discipline, no delegation. (Anduin - OhMyOpenCode)",
     mode: MODE,
     model,
     temperature,

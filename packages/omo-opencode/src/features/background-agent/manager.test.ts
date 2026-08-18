@@ -6201,7 +6201,7 @@ describe("BackgroundManager.handleEvent - session.error", () => {
   test("pins the registered parent agent alias before dispatching a deferred parent wake", async () => {
     //#given
     resetClaudeCodeSessionState()
-    registerAgentName("\u200B\u200B\u200B\u200BAtlas - Plan Executor")
+    registerAgentName("\u200B\u200B\u200B\u200BSaurfang - Plan Executor")
     const promptCalls: Array<{ path: { id: string }; body: Record<string, unknown> }> = []
     const client = {
       session: {
@@ -6238,7 +6238,7 @@ describe("BackgroundManager.handleEvent - session.error", () => {
 
     //#then
     expect(promptCalls).toHaveLength(1)
-    expect(promptCalls[0]?.body.agent).toBe("\u200B\u200B\u200B\u200BAtlas - Plan Executor")
+    expect(promptCalls[0]?.body.agent).toBe("\u200B\u200B\u200B\u200BSaurfang - Plan Executor")
 
     manager.shutdown()
     resetClaudeCodeSessionState()

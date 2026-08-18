@@ -10,20 +10,20 @@
  * type selector dropdown. Use ` - ` (space-dash-space) instead of `(...)`.
  */
 export const AGENT_DISPLAY_NAMES: Record<string, string> = {
-  sisyphus: "Sisyphus - ultraworker",
-  hephaestus: "Hephaestus - Deep Agent",
-  prometheus: "Prometheus - Plan Builder",
-  atlas: "Atlas - Plan Executor",
-  "sisyphus-junior": "Sisyphus-Junior",
-  metis: "Metis - Plan Consultant",
-  momus: "Momus - Plan Critic",
-  athena: "Athena - Council",
-  "athena-junior": "Athena-Junior - Council",
-  oracle: "oracle",
-  librarian: "librarian",
-  explore: "explore",
-  "multimodal-looker": "multimodal-looker",
-  "council-member": "council-member",
+  sisyphus: "Arthas - ultraworker",
+  hephaestus: "Illidan - Deep Agent",
+  prometheus: "Khadgar - Plan Builder",
+  atlas: "Saurfang - Plan Executor",
+  "sisyphus-junior": "Anduin",
+  metis: "Jaina - Plan Consultant",
+  momus: "Gallywix - Plan Critic",
+  athena: "KirinTor - Council",
+  "athena-junior": "Kael - Council",
+  oracle: "Medivh",
+  librarian: "Chromie",
+  explore: "Brann",
+  "multimodal-looker": "Alleria",
+  "council-member": "Rhonin",
 }
 
 const INVISIBLE_AGENT_CHARACTERS_REGEX = /[\u200B\u200C\u200D\uFEFF]/g
@@ -95,6 +95,16 @@ const REVERSE_DISPLAY_NAMES: Record<string, string> = Object.fromEntries(
 // Legacy parenthesized display names for backward compatibility.
 // Old configs/sessions may reference these names; resolve them to config keys.
 const LEGACY_DISPLAY_NAMES: Record<string, string> = {
+  // WoW-era names (current)
+  "arthas (ultraworker)": "sisyphus",
+  "illidan (deep agent)": "hephaestus",
+  "khadgar (plan builder)": "prometheus",
+  "saurfang (plan executor)": "atlas",
+  "jaina (plan consultant)": "metis",
+  "gallywix (plan critic)": "momus",
+  "kirintor (council)": "athena",
+  "kael (council)": "athena-junior",
+  // Pre-WoW names for backward compatibility
   "sisyphus (ultraworker)": "sisyphus",
   "hephaestus (deep agent)": "hephaestus",
   "prometheus (plan builder)": "prometheus",

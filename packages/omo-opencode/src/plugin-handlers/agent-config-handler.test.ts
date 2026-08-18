@@ -87,7 +87,7 @@ describe("applyAgentConfig builtin override protection", () => {
   }
 
   const builtinMultimodalLookerConfig: AgentConfig = {
-    name: "multimodal-looker",
+    name: getAgentListDisplayName("multimodal-looker"),
     prompt: "multimodal prompt",
     mode: "subagent",
   }
@@ -100,7 +100,7 @@ describe("applyAgentConfig builtin override protection", () => {
   }
 
   const sisyphusJuniorConfig: AgentConfig = {
-    name: "Sisyphus-Junior",
+    name: getAgentListDisplayName("sisyphus-junior"),
     prompt: "junior prompt",
     mode: "all",
   }
@@ -209,7 +209,7 @@ describe("applyAgentConfig builtin override protection", () => {
   test("normalizes display-name default_agent to runtime agent name", async () => {
     // given
     const config = createBaseConfig()
-    config.default_agent = "Sisyphus - Ultraworker"
+    config.default_agent = "Arthas - Ultraworker"
 
     // when
     await applyAgentConfig({
@@ -760,8 +760,9 @@ describe("applyAgentConfig builtin override protection", () => {
       })
 
       // then
-      expect(result.oracle).toBeDefined()
-      expect(result.oracle?.prompt).not.toBe("evil override prompt")
+      const oracleResult = result[getAgentListDisplayName("oracle")]
+      expect(oracleResult).toBeDefined()
+      expect(oracleResult?.prompt).not.toBe("evil override prompt")
     })
 
     test("precedence: configAgents override agent_definitions", async () => {

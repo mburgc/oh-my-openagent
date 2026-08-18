@@ -589,7 +589,7 @@ describe("sisyphus-task", () => {
       await tool.execute(args, toolContext)
 
       // then
-      expect(requireCapturedLaunchInput(launchInput).agent).toBe("Sisyphus-Junior")
+      expect(requireCapturedLaunchInput(launchInput).agent).toBe("Anduin")
     }, { timeout: 10000 })
 
     test("prefers category over subagent_type when both are provided", async () => {
@@ -651,7 +651,7 @@ describe("sisyphus-task", () => {
       await tool.execute(args, toolContext)
 
       //#then - category takes precedence, subagent_type is overridden to sisyphus-junior
-      expect(requireCapturedLaunchInput(launchInput).agent).toBe("Sisyphus-Junior")
+      expect(requireCapturedLaunchInput(launchInput).agent).toBe("Anduin")
     }, { timeout: 10000 })
 
     test("proceeds without error when systemDefaultModel is undefined", async () => {
@@ -4626,7 +4626,7 @@ describe("sisyphus-task", () => {
       )
 
       // then - title should follow OpenCode format
-      expect(createBody.title).toBe("Implement feature X (@Sisyphus-Junior subagent)")
+      expect(createBody.title).toBe("Implement feature X (@Anduin subagent)")
     }, { timeout: 10000 })
 
     test("sync task output includes <task_metadata> block with session_id", async () => {

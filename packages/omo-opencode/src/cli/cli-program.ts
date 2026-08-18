@@ -125,7 +125,7 @@ Model Providers (Priority: Native > Copilot > OpenCode Zen > Z.ai > Kimi > Baili
   Copilot       github-copilot/ models (fallback)
   OpenCode Zen  opencode/ models (opencode/claude-opus-4-7, etc.)
   Z.ai          zai-coding-plan/glm-5 (visual-engineering fallback)
-  Kimi          kimi-for-coding/k2p5 (Sisyphus/Prometheus fallback)
+  Kimi          kimi-for-coding/k2p5 (Arthas/Khadgar fallback)
   Bailian       bailian-coding-plan/ models (Qwen, GLM, Kimi fallback)
   MiniMax       minimax-coding-plan/MiniMax-M3 (utility fallback)
   MiniMax CN    minimax-cn-coding-plan/MiniMax-M3 (utility fallback)
@@ -145,7 +145,7 @@ program
    .allowUnknownOption()
    .passThroughOptions()
   .description("Run opencode with todo/background task completion enforcement")
-  .option("-a, --agent <name>", "Agent to use (default: from CLI/env/config, fallback: Sisyphus)")
+  .option("-a, --agent <name>", "Agent to use (default: from CLI/env/config, fallback: Arthas)")
   .option("-m, --model <provider/model>", "Model override (e.g., anthropic/claude-sonnet-4)")
   .option("-d, --directory <path>", "Working directory")
   .option("-p, --port <port>", "Server port (attaches if port already in use)", parseInt)
@@ -158,23 +158,23 @@ program
   .addHelpText("after", `
 Examples:
   $ bunx oh-my-opencode run "Fix the bug in index.ts"
-  $ bunx oh-my-opencode run --agent Sisyphus "Implement feature X"
+  $ bunx oh-my-opencode run --agent Arthas "Implement feature X"
   $ bunx oh-my-opencode run --port 4321 "Fix the bug"
   $ bunx oh-my-opencode run --attach http://127.0.0.1:4321 "Fix the bug"
   $ bunx oh-my-opencode run --json "Fix the bug" | jq .sessionId
   $ bunx oh-my-opencode run --on-complete "notify-send Done" "Fix the bug"
   $ bunx oh-my-opencode run --session-id ses_abc123 "Continue the work"
   $ bunx oh-my-opencode run --model anthropic/claude-sonnet-4 "Fix the bug"
-  $ bunx oh-my-opencode run --agent Sisyphus --model openai/gpt-5.5 "Implement feature X"
+  $ bunx oh-my-opencode run --agent Arthas --model openai/gpt-5.5 "Implement feature X"
 
 Agent resolution order:
   1) --agent flag
   2) OPENCODE_DEFAULT_AGENT
   3) oh-my-opencode.json "default_run_agent"
-  4) Sisyphus (fallback)
+  4) Arthas (fallback)
 
 Available core agents:
-  Sisyphus, Hephaestus, Prometheus, Atlas
+  Arthas, Illidan, Khadgar, Saurfang
 
 Unlike 'opencode run', this command waits until:
   - All todos are completed or cancelled

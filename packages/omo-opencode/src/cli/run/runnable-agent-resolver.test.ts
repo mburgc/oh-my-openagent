@@ -15,20 +15,20 @@ function createClient(agentNames: readonly string[]): RunAgentListClient {
 }
 
 describe("resolveRunnableRunAgent", () => {
-  it("#given server exposes Sisyphus by display name #when run agent is config key #then returns registered display name", async () => {
+  it("#given server exposes Arthas by display name #when run agent is config key #then returns registered display name", async () => {
     // given
-    const client = createClient(["Sisyphus - ultraworker", "general"])
+    const client = createClient(["Arthas - ultraworker", "general"])
 
     // when
     const agent = await resolveRunnableRunAgent(client, "sisyphus")
 
     // then
-    expect(agent).toBe("Sisyphus - ultraworker")
+    expect(agent).toBe("Arthas - ultraworker")
   })
 
   it("#given requested custom agent exists exactly #when resolving runnable agent #then preserves custom name", async () => {
     // given
-    const client = createClient(["custom-agent", "Sisyphus - ultraworker"])
+    const client = createClient(["custom-agent", "Arthas - ultraworker"])
 
     // when
     const agent = await resolveRunnableRunAgent(client, "custom-agent")
@@ -39,13 +39,13 @@ describe("resolveRunnableRunAgent", () => {
 
   it("#given known display-name input #when resolving runnable agent #then returns server registered casing", async () => {
     // given
-    const client = createClient(["Sisyphus - ultraworker"])
+    const client = createClient(["Arthas - ultraworker"])
 
     // when
-    const agent = await resolveRunnableRunAgent(client, "Sisyphus - Ultraworker")
+    const agent = await resolveRunnableRunAgent(client, "Arthas - Ultraworker")
 
     // then
-    expect(agent).toBe("Sisyphus - ultraworker")
+    expect(agent).toBe("Arthas - ultraworker")
   })
 
   it("#given built-in agent has configured display name #when resolving config key #then returns configured server name", async () => {

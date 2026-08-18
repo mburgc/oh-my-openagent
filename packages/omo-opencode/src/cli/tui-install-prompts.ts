@@ -149,7 +149,7 @@ export async function promptInstallConfig(
     message: "Do you have a Kimi For Coding subscription?",
     options: [
       { value: "no", label: "No", hint: "Will use other configured providers" },
-      { value: "yes", label: "Yes", hint: "Kimi K2.5 for Sisyphus/Prometheus fallback" },
+      { value: "yes", label: "Yes", hint: "Kimi K2.5 for Arthas/Khadgar fallback" },
     ],
     initialValue: initial.kimiForCoding,
   })

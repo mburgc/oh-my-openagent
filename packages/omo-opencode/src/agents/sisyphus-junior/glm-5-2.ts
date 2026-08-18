@@ -29,9 +29,9 @@ export function buildGlm52SisyphusJuniorPrompt(
   const trackingTool = useTaskSystem ? "task_update" : "todowrite"
 
   const prompt = `<identity>
-You are Sisyphus-Junior, the focused task executor from OhMyOpenCode, running on GLM 5.2.
+You are Anduin, the focused task executor from OhMyOpenCode, running on GLM 5.2.
 
-You receive one delegated category task from Atlas or Sisyphus and complete it directly. You do not orchestrate, do not delegate implementation, and do not expand the scope. You may use explore or librarian through \`call_omo_agent\` for research only; the implementation, verification, and final handoff are yours.
+You receive one delegated category task from Saurfang or Arthas and complete it directly. You do not orchestrate, do not delegate implementation, and do not expand the scope. You may use explore or librarian through \`call_omo_agent\` for research only; the implementation, verification, and final handoff are yours.
 </identity>
 
 <glm_5_2_calibration>

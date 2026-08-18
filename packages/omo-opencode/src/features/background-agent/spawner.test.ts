@@ -693,7 +693,7 @@ describe("background-agent spawner fallback model promotion", () => {
     const task = createTask({
       description: "Legacy ZWSP",
       prompt: "Do work",
-      agent: "\u200B\u200BHephaestus - Deep Agent",
+      agent: "\u200B\u200BIllidan - Deep Agent",
       parentSessionId: "ses_parent",
       parentMessageId: "msg_parent",
     })
@@ -726,14 +726,14 @@ describe("background-agent spawner fallback model promotion", () => {
 
     //#then
     expect(promptCalls).toHaveLength(1)
-    expect(promptCalls[0]?.body?.agent).toBe("Hephaestus - Deep Agent")
+    expect(promptCalls[0]?.body?.agent).toBe("Illidan - Deep Agent")
   })
 
   test("persists the same normalized agent used by promptAsync into session-agent state (GH-3259 follow-up)", async () => {
     //#given - ZWSP+sort-prefix wrapped agent name
     const promptCalls: Array<{ body?: { agent?: string } }> = []
     const sessionID = "ses_child_normalized"
-    const wrappedAgent = "\u200B\u200B5|Hephaestus - Deep Agent"
+    const wrappedAgent = "\u200B\u200B5|Illidan - Deep Agent"
 
     const client = {
       session: {
@@ -786,7 +786,7 @@ describe("background-agent spawner fallback model promotion", () => {
     //#then
     expect(promptCalls).toHaveLength(1)
     const dispatchedAgent = promptCalls[0]?.body?.agent
-    expect(dispatchedAgent).toBe("Hephaestus - Deep Agent")
+    expect(dispatchedAgent).toBe("Illidan - Deep Agent")
     expect(getSessionAgent(sessionID)).toBe(dispatchedAgent)
   })
 })
