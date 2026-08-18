@@ -50,7 +50,7 @@ describe("omo schema freshness", () => {
 
     // then
     expect(schemaUrl).toBe(
-      "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
+      "https://raw.githubusercontent.com/mburgc/oh-my-openagent/dev/assets/omo.schema.json",
     )
   })
 })

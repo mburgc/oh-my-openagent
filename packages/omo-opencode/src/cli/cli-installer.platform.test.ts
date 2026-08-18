@@ -228,8 +228,8 @@ describe("runCliInstaller platform branching", () => {
     // then
     const output = consoleLogMock.mock.calls.map((call) => call.join(" ")).join("\n")
     expect(result).toBe(0)
-    expect(output).not.toContain("/user/starred/code-yeongyu/oh-my-openagent")
-    expect(output).not.toContain("/user/starred/code-yeongyu/lazycodex")
+    expect(output).not.toContain("/user/starred/mburgc/oh-my-openagent")
+    expect(output).not.toContain("/user/starred/mburgc/lazycodex")
   })
 
   test("does not prompt for GitHub stars in noninteractive installs even when stdout is a TTY", async () => {

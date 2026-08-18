@@ -40,28 +40,28 @@ const SCHEMAS: SchemaEntry[] = [
     schema: DoctorSchema,
     title: "Doctor Diagnostic Result",
     description: "JSON schema for oh-my-openagent doctor diagnostic output",
-    id: "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/help/doctor.schema.json",
+    id: "https://raw.githubusercontent.com/mburgc/oh-my-openagent/dev/assets/help/doctor.schema.json",
   },
   {
     name: "status",
     schema: StatusSchema,
     title: "System Status",
     description: "JSON schema for oh-my-openagent system status output",
-    id: "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/help/status.schema.json",
+    id: "https://raw.githubusercontent.com/mburgc/oh-my-openagent/dev/assets/help/status.schema.json",
   },
   {
     name: "sandbox",
     schema: SandboxSchema,
     title: "Sandbox Environment",
     description: "JSON schema for oh-my-openagent sandbox execution environment output",
-    id: "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/help/sandbox.schema.json",
+    id: "https://raw.githubusercontent.com/mburgc/oh-my-openagent/dev/assets/help/sandbox.schema.json",
   },
   {
     name: "acp",
     schema: AcpSchema,
     title: "ACP Server Status",
     description: "JSON schema for oh-my-openagent Agent Control Protocol server output",
-    id: "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/help/acp.schema.json",
+    id: "https://raw.githubusercontent.com/mburgc/oh-my-openagent/dev/assets/help/acp.schema.json",
   },
 ]
 

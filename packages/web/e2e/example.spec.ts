@@ -205,6 +205,6 @@ test.describe("Manifesto Page", () => {
 
     // then
     await expect(ctaLink).toBeVisible()
-    await expect(ctaLink).toHaveAttribute("href", "https://github.com/code-yeongyu/oh-my-openagent")
+    await expect(ctaLink).toHaveAttribute("href", "https://github.com/mburgc/oh-my-openagent")
   })
 })

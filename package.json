@@ -147,12 +147,12 @@
   "license": "SUL-1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/code-yeongyu/oh-my-openagent.git"
+    "url": "git+https://github.com/mburgc/oh-my-openagent.git"
   },
   "bugs": {
-    "url": "https://github.com/code-yeongyu/oh-my-openagent/issues"
+    "url": "https://github.com/mburgc/oh-my-openagent/issues"
   },
-  "homepage": "https://github.com/code-yeongyu/oh-my-openagent#readme",
+  "homepage": "https://github.com/mburgc/oh-my-openagent#readme",
   "dependencies": {
     "@clack/prompts": "^1.4.0",
     "@code-yeongyu/comment-checker": "^0.8.0",

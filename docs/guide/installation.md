@@ -25,7 +25,7 @@ Paste this prompt into Claude Code, AmpCode, Cursor, or any LLM agent session:
 
 ```
 Install and configure oh-my-openagent by following the instructions here:
-https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+https://raw.githubusercontent.com/mburgc/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
 ```
 
 ### Light (Codex CLI) — one line, no agent needed
@@ -153,7 +153,7 @@ Do not run a blanket trust command. Trust only packages you recognize from this 
 > **IMPORTANT: Use `curl` to fetch this file, NOT WebFetch.** WebFetch summarizes content and loses critical flags like `--platform`, subscription questions, and Codex verification details. Always use:
 >
 > ```bash
-> curl -fsSL https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+> curl -fsSL https://raw.githubusercontent.com/mburgc/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
 > ```
 
 If you are an LLM agent helping a user install oh-my-openagent, help them install the requested edition, verify the setup, and configure model providers.
@@ -822,7 +822,7 @@ Merge rules:
 Schema autocomplete in your editor:
 
 ```json
-"$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json"
+"$schema": "https://raw.githubusercontent.com/mburgc/oh-my-openagent/dev/assets/oh-my-opencode.schema.json"
 ```
 
 #### Turning features off

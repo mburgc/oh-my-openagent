@@ -33,14 +33,14 @@ The root schema accepts an optional `$schema` string key (`packages/omo-config-c
 A generated JSON schema artifact ships at `assets/omo.schema.json`, produced from `OmoConfigSchema` by the root `build:omo-schema` script (`script/build-omo-schema.ts`, `script/build-omo-schema-document.ts`); run `bun run build:omo-schema` to regenerate it. Point your editor at the raw dev-branch URL:
 
 ```
-https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json
+https://raw.githubusercontent.com/mburgc/oh-my-openagent/dev/assets/omo.schema.json
 ```
 
 ### Example
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
+  "$schema": "https://raw.githubusercontent.com/mburgc/oh-my-openagent/dev/assets/omo.schema.json",
   "categories": {
     "deep": {
       "description": "Deep analysis",

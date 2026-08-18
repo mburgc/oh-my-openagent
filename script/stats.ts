@@ -3,7 +3,7 @@ import { z } from "zod"
 
 const NPM_PACKAGES = ["oh-my-opencode", "oh-my-openagent", "lazycodex-ai"] as const
 const POSTHOG_CAPTURE_URL = "https://us.i.posthog.com/capture/"
-const GITHUB_REPOSITORY = "code-yeongyu/oh-my-openagent"
+const GITHUB_REPOSITORY = "mburgc/oh-my-openagent"
 
 const NpmDownloadsSchema = z.object({
   downloads: z.number().int().nonnegative(),

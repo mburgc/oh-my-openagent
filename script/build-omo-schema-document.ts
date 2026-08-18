@@ -2,7 +2,7 @@ import { z } from "zod"
 import { OmoConfigSchema } from "../packages/omo-config-core/src/schema"
 
 export const OMO_SCHEMA_ID =
-  "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json"
+  "https://raw.githubusercontent.com/mburgc/oh-my-openagent/dev/assets/omo.schema.json"
 
 export function createOmoJsonSchema(): Record<string, unknown> {
   const jsonSchema = z.toJSONSchema(OmoConfigSchema, {

@@ -241,7 +241,7 @@ describe("loadOmoConfig", () => {
 
   test("#given an omo config carrying a $schema key #when loading #then the key is tolerated with no diagnostics and does not disturb the real config sections", () => {
     // given
-    const schemaUrl = "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json"
+    const schemaUrl = "https://raw.githubusercontent.com/mburgc/oh-my-openagent/dev/assets/omo.schema.json"
     const fixture = makeFixture()
     const userPath = join(fixture.xdgConfigHome, "omo", "omo.jsonc")
     writeJsonc(
