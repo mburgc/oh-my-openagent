@@ -1,4 +1,3 @@
-import { createInterface } from "node:readline/promises"
 import color from "picocolors"
 import { PLUGIN_NAME, PUBLISHED_PACKAGE_NAME } from "../shared"
 import type { InstallArgs, InstallPlatform } from "./types"
@@ -26,7 +25,6 @@ import {
 import { getUnsupportedOpenCodeVersionMessage } from "./minimum-opencode-version"
 import { runCodexInstaller } from "./install-codex"
 import { runSenpiInstaller } from "./install-senpi"
-import { starGitHubRepositories } from "./star-request"
 import { getNoModelProvidersWarning, hasAnyConfiguredProvider } from "./provider-availability"
 import { ensureTuiPluginEntry } from "./config-manager/add-tui-plugin-to-tui-config"
 import * as astGrepInstall from "./install-ast-grep-sg"
@@ -189,9 +187,6 @@ export async function runCliInstaller(args: InstallArgs, version: string): Promi
     "The Magic Word",
   )
 
-  if (args.tui) {
-    await maybePromptForGitHubStars(config.platform)
-  }
   console.log(color.dim("oMoMoMoMo... Enjoy!"))
   console.log()
 
@@ -206,35 +201,4 @@ export async function runCliInstaller(args: InstallArgs, version: string): Promi
   }
 
   return 0
-}
-
-async function maybePromptForGitHubStars(platform: InstallPlatform): Promise<void> {
-  if (!process.stdin.isTTY || !process.stdout.isTTY) return
-
-  const readline = createInterface({ input: process.stdin, output: process.stdout })
-  try {
-    const answer = await readline.question(`${SYMBOLS.star} ${color.yellow("Star the repos on GitHub?")} ${color.dim("[y/N]")} `)
-    if (!isYes(answer)) return
-  } finally {
-    readline.close()
-  }
-
-  const results = await starGitHubRepositories(platform)
-  const failed = results.filter((result) => !result.ok)
-  if (failed.length === 0) {
-    printSuccess("Starred GitHub repositories")
-    console.log()
-    return
-  }
-
-  printWarning("Could not star every repository. Make sure GitHub CLI is installed and authenticated.")
-  for (const result of failed) {
-    console.log(`  ${SYMBOLS.bullet} ${result.repository}`)
-  }
-  console.log()
-}
-
-function isYes(value: string): boolean {
-  const normalized = value.trim().toLowerCase()
-  return normalized === "y" || normalized === "yes"
 }

@@ -37,9 +37,9 @@ function createTransportRecorder(capturedMessages) {
 async function readTelemetryCoreDefaultPostHogConstants() {
 	const constantsSource = await readFile(join(telemetryCoreRoot, "src", "constants.ts"), "utf8");
 	const host = constantsSource.match(/DEFAULT_POSTHOG_HOST = "([^"]+)"/)?.[1];
-	const apiKey = constantsSource.match(/DEFAULT_POSTHOG_API_KEY = "([^"]+)"/)?.[1];
+	const apiKey = constantsSource.match(/DEFAULT_POSTHOG_API_KEY = "([^"]*)"/)?.[1];
 	assert.equal(host, "https://us.i.posthog.com");
-	assert.match(apiKey ?? "", /^phc_/);
+	assert.equal(apiKey, "");
 	return { apiKey, host };
 }
 

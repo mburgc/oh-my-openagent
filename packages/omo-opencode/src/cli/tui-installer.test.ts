@@ -5,7 +5,6 @@ import { join } from "node:path"
 import * as p from "@clack/prompts"
 import * as configManager from "./config-manager"
 import * as astGrepInstall from "./install-ast-grep-sg"
-import * as starRequest from "./star-request"
 import * as tuiInstallPrompts from "./tui-install-prompts"
 import { ULTIMATE_FALLBACK } from "./model-fallback"
 import { getNoModelProvidersWarning } from "./provider-availability"
@@ -418,7 +417,7 @@ describe("runTuiInstaller", () => {
     writeConfigSpy.mockRestore()
   })
 
-  it("stars GitHub repositories when the user confirms", async () => {
+  it("completes installation without requesting GitHub stars", async () => {
     // given
     const restoreSpies = [
       spyOn(p, "spinner").mockReturnValue(createMockSpinner()),
@@ -428,7 +427,6 @@ describe("runTuiInstaller", () => {
       spyOn(p.log, "success").mockImplementation(() => undefined),
       spyOn(p.log, "message").mockImplementation(() => undefined),
       spyOn(p, "note").mockImplementation(() => undefined),
-      spyOn(p, "confirm").mockResolvedValue(true),
       spyOn(p, "outro").mockImplementation(() => undefined),
       spyOn(tuiInstallPrompts, "promptInstallPlatform").mockResolvedValue("opencode"),
       spyOn(configManager, "detectCurrentConfig").mockReturnValue({
@@ -475,22 +473,15 @@ describe("runTuiInstaller", () => {
         configPath: "/tmp/oh-my-opencode.jsonc",
       }),
     ]
-    const starSpy = spyOn(starRequest, "starGitHubRepositories").mockResolvedValue([
-      { repository: "code-yeongyu/oh-my-openagent", ok: true },
-      { repository: "code-yeongyu/lazycodex", ok: true },
-    ])
 
     // when
     const result = await runTuiInstaller({ tui: true }, "3.16.0")
 
     // then
     expect(result).toBe(0)
-    expect(starSpy).toHaveBeenCalledTimes(1)
-    expect(starSpy).toHaveBeenCalledWith("opencode")
 
     for (const spy of restoreSpies) {
       spy.mockRestore()
     }
-    starSpy.mockRestore()
   })
 })

@@ -14,7 +14,6 @@ import { getUnsupportedOpenCodeVersionMessage } from "./minimum-opencode-version
 import { promptInstallConfig, promptInstallPlatform } from "./tui-install-prompts"
 import { detectCodexInstallation, formatCodexInstallationWarning, runCodexInstaller } from "./install-codex"
 import { runSenpiInstaller } from "./install-senpi"
-import { starGitHubRepositories } from "./star-request"
 import { getNoModelProvidersWarning, hasAnyConfiguredProvider } from "./provider-availability"
 import { ensureTuiPluginEntry } from "./config-manager/add-tui-plugin-to-tui-config"
 import * as astGrepInstall from "./install-ast-grep-sg"
@@ -172,22 +171,6 @@ export async function runTuiInstaller(args: InstallArgs, version: string): Promi
       `deep exploration, and relentless execution until completion.`,
     "The Magic Word",
   )
-
-  const shouldStar = await p.confirm({
-    message: "Star the repos on GitHub?",
-    initialValue: false,
-  })
-  if (!p.isCancel(shouldStar) && shouldStar) {
-    spinner.start("Starring GitHub repositories")
-    const results = await starGitHubRepositories(selectedPlatform)
-    const failed = results.filter((result) => !result.ok)
-    if (failed.length === 0) {
-      spinner.stop("GitHub repositories starred")
-    } else {
-      spinner.stop("Could not star every repository")
-      p.log.warn("Make sure GitHub CLI is installed and authenticated.")
-    }
-  }
 
   p.outro(color.green("oMoMoMoMo... Enjoy!"))
 

@@ -258,7 +258,7 @@ describe("omo-codex posthog telemetry", () => {
       join(import.meta.dir, "../../../../packages/telemetry-core/src/constants.ts"),
       "utf-8",
     )
-    const match = telemetryCoreConstants.match(/DEFAULT_POSTHOG_API_KEY = "(phc_[a-zA-Z0-9]+)"/)
+    const match = telemetryCoreConstants.match(/DEFAULT_POSTHOG_API_KEY = "([^"]*)"/)
 
     // when
     const sourceKey = match?.[1]
