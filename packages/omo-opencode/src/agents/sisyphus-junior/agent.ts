@@ -1,18 +1,6 @@
-/**
- * Anduin - Focused Task Executor
- *
- * Executes delegated tasks directly without spawning other agents.
- * Category-spawned executor with domain-specific configurations.
- *
- * Routing:
- * 1. GPT models (openai/*, github-copilot/gpt-*) -> gpt.ts (GPT-5.4 optimized)
- * 2. Gemini models (google/*, google-vertex/*) -> gemini.ts (Gemini-optimized)
- * 3. Default (Claude, etc.) -> default.ts (Claude-optimized)
- */
-
 import type { AgentConfig } from "@opencode-ai/sdk"
 import type { AgentMode } from "../types"
-import { isGlmModel, isGpt5_5Model, isGpt5_6Model, isGptModel, isGeminiModel, isKimiK2Model, isKimiK27Model, buildClaudeThinkingConfig } from "../types"
+import { isGlmModel, isGptModel, isGeminiModel, buildClaudeThinkingConfig } from "../types"
 import type { AgentOverrideConfig } from "../../config/schema"
 import {
   createAgentToolRestrictions,
@@ -21,18 +9,9 @@ import {
 } from "../../shared/permission-compat"
 
 import { buildDefaultSisyphusJuniorPrompt } from "./default"
-import { buildKimiK26SisyphusJuniorPrompt } from "./kimi-k2-6"
-import { buildKimiK27SisyphusJuniorPrompt } from "./kimi-k2-7"
-import { buildGptSisyphusJuniorPrompt } from "./gpt"
-import { buildGpt54SisyphusJuniorPrompt } from "./gpt-5-4"
-import { buildGpt55SisyphusJuniorPrompt } from "./gpt-5-5"
-import { buildGeminiSisyphusJuniorPrompt } from "./gemini"
-import { buildGlm52SisyphusJuniorPrompt } from "./glm-5-2"
 
 const MODE: AgentMode = "subagent"
 
-// Core tools that Anduin must NEVER have access to
-// Note: call_omo_agent is ALLOWED so subagents can spawn explore/librarian
 const BLOCKED_TOOLS = ["task"]
 
 export const SISYPHUS_JUNIOR_DEFAULTS = {
@@ -40,61 +19,12 @@ export const SISYPHUS_JUNIOR_DEFAULTS = {
   temperature: 0.1,
 } as const
 
-export type SisyphusJuniorPromptSource =
-  | "default"
-  | "kimi-k2"
-  | "kimi-k2-7"
-  | "gpt"
-  | "gpt-5-5"
-  | "gpt-5-4"
-  | "gemini"
-  | "glm-5-2"
-
-export function getSisyphusJuniorPromptSource(model?: string): SisyphusJuniorPromptSource {
-  if (model && isKimiK27Model(model)) return "kimi-k2-7"
-  if (model && isKimiK2Model(model)) return "kimi-k2"
-  if (model && isGptModel(model)) {
-    if (isGpt5_5Model(model) || isGpt5_6Model(model)) return "gpt-5-5"
-    const lower = model.toLowerCase()
-    if (lower.includes("gpt-5.4") || lower.includes("gpt-5-4")) return "gpt-5-4"
-    return "gpt"
-  }
-  if (model && isGeminiModel(model)) {
-    return "gemini"
-  }
-  if (model && isGlmModel(model)) return "glm-5-2"
-  return "default"
-}
-
-/**
- * Builds the appropriate Anduin prompt based on model.
- */
 export function buildSisyphusJuniorPrompt(
-  model: string | undefined,
+  _model: string | undefined,
   useTaskSystem: boolean,
   promptAppend?: string
 ): string {
-  const source = getSisyphusJuniorPromptSource(model)
-
-  switch (source) {
-    case "kimi-k2-7":
-      return buildKimiK27SisyphusJuniorPrompt(useTaskSystem, promptAppend)
-    case "kimi-k2":
-      return buildKimiK26SisyphusJuniorPrompt(useTaskSystem, promptAppend)
-    case "gpt-5-5":
-      return buildGpt55SisyphusJuniorPrompt(useTaskSystem, promptAppend)
-    case "gpt-5-4":
-      return buildGpt54SisyphusJuniorPrompt(useTaskSystem, promptAppend)
-    case "gpt":
-      return buildGptSisyphusJuniorPrompt(useTaskSystem, promptAppend)
-    case "gemini":
-      return buildGeminiSisyphusJuniorPrompt(useTaskSystem, promptAppend)
-    case "glm-5-2":
-      return buildGlm52SisyphusJuniorPrompt(useTaskSystem, promptAppend)
-    case "default":
-    default:
-      return buildDefaultSisyphusJuniorPrompt(useTaskSystem, promptAppend)
-  }
+  return buildDefaultSisyphusJuniorPrompt(useTaskSystem, promptAppend)
 }
 
 export function createSisyphusJuniorAgentWithOverrides(
