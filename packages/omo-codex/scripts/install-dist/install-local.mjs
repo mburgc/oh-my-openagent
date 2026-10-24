@@ -176,7 +176,7 @@ var init_activity_state = __esm(() => {
 });
 
 // packages/telemetry-core/src/constants.ts
-var DEFAULT_POSTHOG_HOST = "https://us.i.posthog.com", DEFAULT_POSTHOG_API_KEY = "phc_CFJhj5HyvA62QPhvyaUCtaq23aUfznnijg5VaaGkNk74";
+var DEFAULT_POSTHOG_HOST = "https://us.i.posthog.com", DEFAULT_POSTHOG_API_KEY = "";
 
 // packages/telemetry-core/src/diagnostics.ts
 import { appendFileSync, existsSync as existsSync6, mkdirSync as mkdirSync3, readFileSync as readFileSync3 } from "node:fs";
@@ -2292,31 +2292,31 @@ var init_exception_steps = __esm(() => {
 // node_modules/.bun/@posthog+core@1.30.3/node_modules/@posthog/core/dist/error-tracking/index.mjs
 var exports_error_tracking = {};
 __export(exports_error_tracking, {
-  winjsStackLineParser: () => winjsStackLineParser,
-  stripReservedExceptionStepFields: () => stripReservedExceptionStepFields,
-  reverseAndStripFrames: () => reverseAndStripFrames,
-  resolveExceptionStepsConfig: () => resolveExceptionStepsConfig,
-  opera11StackLineParser: () => opera11StackLineParser,
-  opera10StackLineParser: () => opera10StackLineParser,
-  nodeStackLineParser: () => nodeStackLineParser,
-  getUtf8ByteLength: () => getUtf8ByteLength,
-  geckoStackLineParser: () => geckoStackLineParser,
-  createStackParser: () => createStackParser,
-  createDefaultStackParser: () => createDefaultStackParser,
-  chromeStackLineParser: () => chromeStackLineParser,
-  StringCoercer: () => StringCoercer,
-  ReduceableCache: () => ReduceableCache,
-  PromiseRejectionEventCoercer: () => PromiseRejectionEventCoercer,
-  PrimitiveCoercer: () => PrimitiveCoercer,
-  ObjectCoercer: () => ObjectCoercer,
-  ExceptionStepsBuffer: () => ExceptionStepsBuffer,
-  EventCoercer: () => EventCoercer,
-  ErrorPropertiesBuilder: () => ErrorPropertiesBuilder,
-  ErrorEventCoercer: () => ErrorEventCoercer,
-  ErrorCoercer: () => ErrorCoercer,
-  EXCEPTION_STEP_INTERNAL_FIELDS: () => EXCEPTION_STEP_INTERNAL_FIELDS,
+  DEFAULT_EXCEPTION_STEPS_CONFIG: () => DEFAULT_EXCEPTION_STEPS_CONFIG,
   DOMExceptionCoercer: () => DOMExceptionCoercer,
-  DEFAULT_EXCEPTION_STEPS_CONFIG: () => DEFAULT_EXCEPTION_STEPS_CONFIG
+  EXCEPTION_STEP_INTERNAL_FIELDS: () => EXCEPTION_STEP_INTERNAL_FIELDS,
+  ErrorCoercer: () => ErrorCoercer,
+  ErrorEventCoercer: () => ErrorEventCoercer,
+  ErrorPropertiesBuilder: () => ErrorPropertiesBuilder,
+  EventCoercer: () => EventCoercer,
+  ExceptionStepsBuffer: () => ExceptionStepsBuffer,
+  ObjectCoercer: () => ObjectCoercer,
+  PrimitiveCoercer: () => PrimitiveCoercer,
+  PromiseRejectionEventCoercer: () => PromiseRejectionEventCoercer,
+  ReduceableCache: () => ReduceableCache,
+  StringCoercer: () => StringCoercer,
+  chromeStackLineParser: () => chromeStackLineParser,
+  createDefaultStackParser: () => createDefaultStackParser,
+  createStackParser: () => createStackParser,
+  geckoStackLineParser: () => geckoStackLineParser,
+  getUtf8ByteLength: () => getUtf8ByteLength,
+  nodeStackLineParser: () => nodeStackLineParser,
+  opera10StackLineParser: () => opera10StackLineParser,
+  opera11StackLineParser: () => opera11StackLineParser,
+  resolveExceptionStepsConfig: () => resolveExceptionStepsConfig,
+  reverseAndStripFrames: () => reverseAndStripFrames,
+  stripReservedExceptionStepFields: () => stripReservedExceptionStepFields,
+  winjsStackLineParser: () => winjsStackLineParser
 });
 var init_error_tracking = __esm(() => {
   init_error_properties_builder();
@@ -5903,7 +5903,7 @@ var package_default;
 var init_package = __esm(() => {
   package_default = {
     name: "@oh-my-opencode/omo-codex",
-    version: "4.17.0",
+    version: "4.17.1",
     type: "module",
     private: true,
     description: "Codex harness adapter for oh-my-openagent. Vendored Codex plugin namespace (omo) + TypeScript installer + telemetry.",
@@ -6108,14 +6108,14 @@ var init_posthog = __esm(() => {
 // packages/omo-codex/src/telemetry/index.ts
 var exports_telemetry = {};
 __export(exports_telemetry, {
-  getPostHogDistinctId: () => getPostHogDistinctId,
-  createPluginPostHog: () => createPluginPostHog,
-  createInstallPostHog: () => createInstallPostHog,
-  createCliPostHog: () => createCliPostHog,
-  __setOsProviderForTesting: () => __setOsProviderForTesting,
-  __setActivityStateProviderForTesting: () => __setActivityStateProviderForTesting,
+  __resetActivityStateProviderForTesting: () => __resetActivityStateProviderForTesting,
   __resetOsProviderForTesting: () => __resetOsProviderForTesting,
-  __resetActivityStateProviderForTesting: () => __resetActivityStateProviderForTesting
+  __setActivityStateProviderForTesting: () => __setActivityStateProviderForTesting,
+  __setOsProviderForTesting: () => __setOsProviderForTesting,
+  createCliPostHog: () => createCliPostHog,
+  createInstallPostHog: () => createInstallPostHog,
+  createPluginPostHog: () => createPluginPostHog,
+  getPostHogDistinctId: () => getPostHogDistinctId
 });
 var init_telemetry = __esm(() => {
   init_posthog();
@@ -8095,6 +8095,14 @@ function parseAgentHeaderName(header) {
   const path = parseTomlDottedKey(header);
   return path?.[0] === "agents" ? path[1] ?? null : null;
 }
+function parseJsonString(value) {
+  try {
+    const parsed = JSON.parse(value);
+    return typeof parsed === "string" ? parsed : null;
+  } catch {
+    return null;
+  }
+}
 function parseHookStateHeaderKey(header) {
   const path = parseTomlDottedKey(header);
   if (path?.[0] !== "hooks" || path[1] !== "state")
@@ -9249,16 +9257,6 @@ function isSectionHeader3(line) {
 }
 function agentNameFromToml(fileName) {
   return fileName.endsWith(".toml") ? fileName.slice(0, -".toml".length) : fileName;
-}
-function parseJsonString(value) {
-  try {
-    const parsed = JSON.parse(value);
-    return typeof parsed === "string" ? parsed : null;
-  } catch (error) {
-    if (error instanceof Error)
-      return null;
-    return null;
-  }
 }
 async function exists2(path) {
   try {
@@ -11082,23 +11080,23 @@ async function runLazyCodexInstallLocalCli(input) {
   return 0;
 }
 export {
-  updateCodexConfig,
-  stampGitBashMcpEnv,
-  runLazyCodexInstallLocalCli,
-  runDelegatedOmoCommand,
-  resolveDefaultRepoRootForEntrypoint,
-  resolveDefaultRepoRoot,
-  resolveCodexInstallerBinDir,
-  repairNearestProjectLocalCodexArtifacts,
-  readCodexModelCatalog,
-  parseLazyCodexInstallCliArgs,
-  linkRootRuntimeBin,
-  linkCachedPluginBins,
-  installMarketplaceLocally,
-  installCachedPlugin,
-  formatLazyCodexInstallHelp,
-  findMissingHookCommandTargets,
-  buildDelegatedOmoInvocation,
+  PASSTHROUGH_COMMANDS,
   assertHookCommandTargets,
-  PASSTHROUGH_COMMANDS
+  buildDelegatedOmoInvocation,
+  findMissingHookCommandTargets,
+  formatLazyCodexInstallHelp,
+  installCachedPlugin,
+  installMarketplaceLocally,
+  linkCachedPluginBins,
+  linkRootRuntimeBin,
+  parseLazyCodexInstallCliArgs,
+  readCodexModelCatalog,
+  repairNearestProjectLocalCodexArtifacts,
+  resolveCodexInstallerBinDir,
+  resolveDefaultRepoRoot,
+  resolveDefaultRepoRootForEntrypoint,
+  runDelegatedOmoCommand,
+  runLazyCodexInstallLocalCli,
+  stampGitBashMcpEnv,
+  updateCodexConfig
 };
