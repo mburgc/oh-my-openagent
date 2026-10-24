@@ -51,7 +51,7 @@ describe("resolveMultimodalLookerAgentMetadata", () => {
     spyOn(connectedProvidersCache, "readConnectedProvidersCache").mockReturnValue(["rundao"])
     const ctx = createPluginInput([
       {
-        name: "multimodal-looker",
+        name: "Alleria",
         model: { providerID: "rundao", modelID: "public/qwen3.5-397b" },
       },
     ])
@@ -80,7 +80,7 @@ describe("resolveMultimodalLookerAgentMetadata", () => {
     spyOn(connectedProvidersCache, "readConnectedProvidersCache").mockReturnValue(["openai"])
     const ctx = createPluginInput([
       {
-        name: "multimodal-looker",
+        name: "Alleria",
         model: { providerID: "openai", modelID: "gpt-5.4" },
       },
     ])
@@ -109,7 +109,7 @@ describe("resolveMultimodalLookerAgentMetadata", () => {
     spyOn(connectedProvidersCache, "readConnectedProvidersCache").mockReturnValue(["openai", "rundao"])
     const ctx = createPluginInput([
       {
-        name: "multimodal-looker",
+        name: "Alleria",
         model: { providerID: "openai", modelID: "gpt-5.4" },
         variant: "medium",
       },
@@ -157,7 +157,7 @@ describe("resolveMultimodalLookerAgentMetadata", () => {
     spyOn(connectedProvidersCache, "readConnectedProvidersCache").mockReturnValue(["openai"])
     const ctx = createPluginInput([
       {
-        name: "multimodal-looker",
+        name: "Alleria",
         model: { providerID: "openai", modelID: "gpt-5.4" },
       },
     ])

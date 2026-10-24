@@ -320,7 +320,7 @@ describe("look-at tool", () => {
           agents: async () => ({
             data: [
               {
-                name: "multimodal-looker",
+                name: "Alleria",
                 mode: "subagent",
                 model: { providerID: "google", modelID: "gemini-3-flash" },
               },
@@ -363,6 +363,7 @@ describe("look-at tool", () => {
         toolContext
       )
 
+      expect(promptBody.agent).toBe("Alleria")
       expect(promptBody.model).toEqual({
         providerID: "google",
         modelID: "gemini-3-flash",
